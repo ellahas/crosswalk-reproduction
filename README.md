@@ -1,6 +1,6 @@
 # On the reproducibility of “CrossWalk: Fairness-Enhanced Node Representation Learning”
 
-In this repository, you can find a re-implementation of [CrossWalk: Fairness-Enhanced Node Representation Learning](https://arxiv.org/abs/2105.02725) by Khajehnejad et al. (2022). It can be used to reproduce the results and extend on the ideas of the paper. The repository was created as part of a reproducibility study submitted to [ML Reproducibility Challenge 2022](https://paperswithcode.com/rc2022).
+In this repository, you can find a re-implementation of [CrossWalk: Fairness-Enhanced Node Representation Learning](https://arxiv.org/abs/2105.02725) by Khajehnejad et al. (2022). It can be used to reproduce the results and extend on the ideas of the paper. The repository was created as part of a reproducibility study and was accepted for the [ML Reproducibility Challenge 2022](https://paperswithcode.com/rc2022). For the reproducibility study itself see our [Open Review Page](https://openreview.net/forum?id=WnaVgRhlyT).
 
 Please cite the original paper if you find this useful:
 ```
