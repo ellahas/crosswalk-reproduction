@@ -1,0 +1,28 @@
+[project]
+name = "crosswalk-reproduction"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "dgl>=2.4.0",
+    "gensim==4.3.0",
+    "matplotlib==3.6.2",
+    "networkx==3.0",
+    "numpy==1.23.2",
+    "pandas==1.5.2",
+    "pydantic>=2.12.5",
+    "scikit-learn==0.24.2",
+    "scikit-learn-extra==0.2.0",
+    "scipy==1.9.1",
+    "torch==2.1.0",
+    "tqdm>=4.67.1",
+    "yacs==0.1.8",
+]
+
+[project.scripts]
+xwalk_reprod = "crosswalk_reproduction.__main__:main"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
