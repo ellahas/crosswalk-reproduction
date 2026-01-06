@@ -1,5 +1,5 @@
 import networkx as nx
-from dgl.heterograph import DGLHeteroGraph
+from dgl.heterograph import DGLGraph
 import matplotlib.pyplot as plt
 
 
@@ -15,7 +15,7 @@ def visualize_graph(g, node_color_key=None, edge_label_key=None):
     # Convert data to nx graph if necessary
     if type(g) in [nx.classes.graph.Graph, nx.classes.digraph.DiGraph]:
         g = g
-    elif type(g) in [DGLHeteroGraph]:
+    elif type(g) in [DGLGraph]:
         node_color = None if node_color_key is None else g.ndata[node_color_key]
         edge_labels = None
         if edge_label_key is not None:

@@ -208,9 +208,9 @@ def graph_from_la(links, attributes, weight_key="weights", group_key="groups"):
     # by default all int values are int64
     graph = graph.long()
 
-    # ToSimple removes parallel edges.
-    transform = dgl.transforms.ToSimple()
-    graph = transform(graph)
+    # ToSimple removes parallel edges. TODO: make this work on GPU?
+    # transform = dgl.transforms.ToSimple()
+    # graph = transform(graph)
 
     # sort nodes of the graph by new id, you should not get nodes
     # by index ever, but if it happens somewhere this should prevent 

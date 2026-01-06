@@ -34,6 +34,7 @@ def set_seed(seed):
     torch.manual_seed(seed)
     dgl.seed(seed)
     if torch.cuda.is_available():
+        print(torch.cuda.device_count())
         torch.cuda.manual_seed(seed)
         torch.cuda.manual_seed_all(seed)
 
@@ -508,6 +509,7 @@ def parse_args():
                         help="Modify config options using the command-line",
                         default=[],
                         nargs=argparse.REMAINDER)
+    parser.add_argument('--node', help='node ID', default=0, type=int)
     args = parser.parse_args()
 
     cfg = get_cfg_defaults()
@@ -517,6 +519,7 @@ def parse_args():
     cfg.RUN_ALL = args.run_all
     print(cfg.RUN_ALL)
     cfg.CFG_PATH = args.cfg
+    cfg.NODE = args.node
 
     # only setup everything here if a single experiment is run otherwise it is done in the reproduce function.
     if not cfg.RUN_ALL:
@@ -564,6 +567,8 @@ def setup_logger(cfg):
 def main():
     cfg = parse_args()
     set_seed(cfg.SEED)
+    torch.cuda.set_device(cfg.NODE)
+    torch.set_default_tensor_type('torch.cuda.FloatTensor')
 
     if cfg.RUN_ALL:
         reproduce(cfg)
