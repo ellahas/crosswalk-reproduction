@@ -22,7 +22,7 @@ def estimate_node_colorfulness(g, node_idx, walk_length, walks_per_node, group_k
         float: The estimated colorfulness of this node.
     """
     # Obtain walks starting from source node
-    start_nodes = (torch.ones(walks_per_node) * node_idx).type(torch.int64).to('cuda')
+    start_nodes = (torch.ones(walks_per_node) * node_idx).type(torch.int64)
     walks, _ = dgl.sampling.random_walk(g, start_nodes, length=walk_length, prob=prob)
 
     # Obtain groups of nodes visited
@@ -82,7 +82,7 @@ def get_crosswalk_weights(g, alpha, p, walk_length, walks_per_node, group_key, p
         colorfulnesses = colorfulnesses + 0.001
 
     # Compute new weights
-    new_weights = torch.empty_like(prior_weights).to('cuda')
+    new_weights = torch.empty_like(prior_weights)
     for source in g.nodes():
         source_group = g.ndata[group_key][source]
         all_neighbors = g.successors(source)

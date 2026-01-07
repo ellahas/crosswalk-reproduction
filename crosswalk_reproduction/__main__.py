@@ -85,7 +85,7 @@ def load_or_construct_graph(cfg):
         logger.info(f"loaded graph from: '{graph_filepath}'")
 
     graph = graph.to("cuda")
-    torch.set_default_tensor_type('torch.cuda.FloatTensor')
+    torch.set_default_device(f'cuda:{cfg.NODE}')
     logger.info(f"Graph on device: {graph.device}")
     return graph
 
@@ -532,7 +532,6 @@ def parse_args():
         cfg = update_config(cfg, args, freeze=False)
 
     cfg.RUN_ALL = args.run_all
-    print(cfg.RUN_ALL)
     cfg.CFG_PATH = args.cfg
     cfg.NODE = args.node
 
