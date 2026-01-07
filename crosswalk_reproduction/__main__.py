@@ -64,6 +64,7 @@ def load_or_construct_graph(cfg):
                     logger.info(f"generating: Deezer graph.bin")
                     path = "data/immutable/deezer/deezer_europe.links"
                     graph = read_graph(path)
+                    save_graphs(graph_filepath, [graph])
                 else:
                     logger.info(f"reading: {cfg.DATASET_PATHS.DEEZER}")
                     graph = read_graph(cfg.DATASET_PATHS.DEEZER,
