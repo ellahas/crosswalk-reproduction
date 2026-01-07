@@ -22,14 +22,9 @@ def estimate_node_colorfulness(g, node_idx, walk_length, walks_per_node, group_k
         float: The estimated colorfulness of this node.
     """
     # Obtain walks starting from source node
-    start_nodes = (torch.ones(walks_per_node) * node_idx).type(torch.int64).to('cpu')
-    g = g.to('cpu')
-    logger.info("graph on cpu")
+    start_nodes = (torch.ones(walks_per_node) * node_idx).type(torch.int64)
     walks, _ = dgl.sampling.random_walk(g, start_nodes, length=walk_length, prob=prob)
     logger.info("colorfulness walks done")
-    g = g.to('cuda')
-    walks = walks.to('cuda')
-    logger.info('graph and walks on gpu')
 
     # Obtain groups of nodes visited
     visited_nodes = walks.flatten()

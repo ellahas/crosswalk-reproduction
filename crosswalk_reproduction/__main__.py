@@ -84,8 +84,6 @@ def load_or_construct_graph(cfg):
         graph = load_graphs(graph_filepath)[0][0]
         logger.info(f"loaded graph from: '{graph_filepath}'")
 
-    graph = graph.to("cuda")
-    torch.set_default_device(f'cuda:{cfg.NODE}')
     logger.info(f"Graph on device: {graph.device}")
     return graph
 
