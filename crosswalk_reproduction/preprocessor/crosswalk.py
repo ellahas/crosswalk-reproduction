@@ -22,7 +22,7 @@ def estimate_node_colorfulness(g, node_idx, walk_length, walks_per_node, group_k
         float: The estimated colorfulness of this node.
     """
     # Obtain walks starting from source node
-    start_nodes = (torch.ones(walks_per_node) * node_idx)
+    start_nodes = (torch.ones(walks_per_node) * node_idx).type(torch.int64)
     logger.info(f"start nodes on device: {start_nodes.device}")
     walks, _ = dgl.sampling.random_walk(g, start_nodes, length=walk_length, prob=prob)
 
