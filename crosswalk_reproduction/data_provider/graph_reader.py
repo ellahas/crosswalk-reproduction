@@ -66,6 +66,12 @@ def read_links_file(link_filepath):
                     "edge_attributes": 1.0  # default edge attribute is 1.0
                 }
                 links.append(link_dict)
+                link_dict = {
+                    "source_id": int(linkdata[1]),
+                    "target_id": int(linkdata[0]),
+                    "edge_attributes": 1.0  # default edge attribute is 1.0
+                }
+                links.append(link_dict)
 
             # weighted undirected graph
             elif len(linkdata) == 3:
