@@ -70,7 +70,8 @@ def load_or_construct_graph(cfg):
         # load graph,
         # we assume each graph.bin file only contains one graph, hence the [0][0]
         graph = load_graphs(graph_filepath)[0][0]
-        logger.info(f"loaded graph from: '{graph_filepath}'")
+        graph.cuda()
+        logger.info(f"loaded graph onto GPU from: '{graph_filepath}'")
 
     return graph
 
@@ -568,7 +569,6 @@ def main():
     cfg = parse_args()
     set_seed(cfg.SEED)
     torch.cuda.set_device(cfg.NODE)
-    torch.set_default_tensor_type('torch.cuda.FloatTensor')
 
     if cfg.RUN_ALL:
         reproduce(cfg)
