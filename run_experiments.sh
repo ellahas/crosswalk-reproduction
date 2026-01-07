@@ -11,6 +11,7 @@ do
         for t in "${tasks[@]}";
         do
             echo $t
+            uv run xwalk_reprod --cfg "experiments/${t}_${d}_${m}.yml"
         done
     done
 done
