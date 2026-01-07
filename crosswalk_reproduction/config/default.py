@@ -51,6 +51,7 @@ _C.DATASET_PATHS = CN()
 _C.DATASET_PATHS.RICE = 'data/immutable/rice/rice_subset.attr'
 _C.DATASET_PATHS.RICE_RAW = 'data/immutable/rice/rice_raw.attr'  # contains the missing attributes
 _C.DATASET_PATHS.TWITTER = 'data/immutable/twitter/sample_4000.attr'
+_C.DATASET_PATHS.DEEZER = 'data/immutable/deezer/deezer_europe.attr'
 
 _C.GRAPH_KEYS = CN()
 _C.GRAPH_KEYS.GROUP_KEY = "groups"

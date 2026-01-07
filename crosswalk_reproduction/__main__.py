@@ -55,7 +55,13 @@ def load_or_construct_graph(cfg):
                                    weight_key=cfg.GRAPH_KEYS.PRIOR_WEIGHTS_KEY,
                                    group_key=cfg.GRAPH_KEYS.GROUP_KEY)
             elif cfg.DATASET.lower() == 'twitter':
+                logger.info(f"reading: {cfg.DATASET_PATHS.TWITTER}")
                 graph = read_graph(cfg.DATASET_PATHS.TWITTER,
+                                   weight_key=cfg.GRAPH_KEYS.PRIOR_WEIGHTS_KEY,
+                                   group_key=cfg.GRAPH_KEYS.GROUP_KEY)
+            elif cfg.DATASET.lower() == 'deezer':
+                logger.info(f"reading: {cfg.DATASET_PATHS.DEEZER}")
+                graph = read_graph(cfg.DATASET_PATHS.DEEZER,
                                    weight_key=cfg.GRAPH_KEYS.PRIOR_WEIGHTS_KEY,
                                    group_key=cfg.GRAPH_KEYS.GROUP_KEY)
             else:
