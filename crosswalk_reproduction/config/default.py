@@ -96,7 +96,7 @@ _C.GRAPH_WEIGHTING.USE_ORIGINAL_CROSSWALK_IMPLEMENTATION = False
 ###########################################################
 _C.EMBEDDINGS = CN()
 
-_C.EMBEDDINGS.USE_GENSIM = True             # use original gensim word2vec impl
+_C.EMBEDDINGS.USE_GENSIM = False            # use original gensim word2vec impl
 _C.EMBEDDINGS.MIN_COUNT = 0                 # from original paper, gensim option
 _C.EMBEDDINGS.METHOD = 'node2vec'           # options are ['node2vec', 'deepwalk']
 _C.EMBEDDINGS.EMBEDDING_DIM = 32            # from their bash file
