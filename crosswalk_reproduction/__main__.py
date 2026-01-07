@@ -72,7 +72,7 @@ def load_or_construct_graph(cfg):
         graph = load_graphs(graph_filepath)[0][0]
         logger.info(f"loaded graph from: '{graph_filepath}'")
 
-    graph.cuda()
+    graph.to("cuda")
     logger.info(f"Graph on GPU")
     return graph
 
