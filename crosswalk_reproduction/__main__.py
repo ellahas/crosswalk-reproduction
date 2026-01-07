@@ -70,9 +70,10 @@ def load_or_construct_graph(cfg):
         # load graph,
         # we assume each graph.bin file only contains one graph, hence the [0][0]
         graph = load_graphs(graph_filepath)[0][0]
-        graph.cuda()
-        logger.info(f"loaded graph onto GPU from: '{graph_filepath}'")
+        logger.info(f"loaded graph from: '{graph_filepath}'")
 
+    graph.cuda()
+    logger.info(f"Graph on GPU")
     return graph
 
 
