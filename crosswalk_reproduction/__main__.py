@@ -60,10 +60,15 @@ def load_or_construct_graph(cfg):
                                    weight_key=cfg.GRAPH_KEYS.PRIOR_WEIGHTS_KEY,
                                    group_key=cfg.GRAPH_KEYS.GROUP_KEY)
             elif cfg.DATASET.lower() == 'deezer':
-                logger.info(f"reading: {cfg.DATASET_PATHS.DEEZER}")
-                graph = read_graph(cfg.DATASET_PATHS.DEEZER,
-                                   weight_key=cfg.GRAPH_KEYS.PRIOR_WEIGHTS_KEY,
-                                   group_key=cfg.GRAPH_KEYS.GROUP_KEY)
+                if not os.path.isfile(graph_filepath):
+                    logger.info(f"generating: Deezer graph.bin")
+                    path = "data/immutable/deezer/deezer_europe.links"
+                    graph = read_graph(path)
+                else:
+                    logger.info(f"reading: {cfg.DATASET_PATHS.DEEZER}")
+                    graph = read_graph(cfg.DATASET_PATHS.DEEZER,
+                                    weight_key=cfg.GRAPH_KEYS.PRIOR_WEIGHTS_KEY,
+                                    group_key=cfg.GRAPH_KEYS.GROUP_KEY)
             else:
                 raise NotImplementedError(f"no known dataset: {cfg.DATASET}")
             logger.info(f"loaded graph: {cfg.DATASET.lower()}")
