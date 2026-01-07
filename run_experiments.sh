@@ -1,7 +1,7 @@
 #!/bin/bash
-models=["deepwalk_crosswalk", "deepwalk_fairwalk", "deepwalk_skip"]
-data=["rice", "deezer"]
-tasks=["linkpred", "infmax"]
+models=("deepwalk_crosswalk", "deepwalk_fairwalk", "deepwalk_skip")
+data=("rice", "deezer")
+tasks=("linkpred", "infmax")
 for d in data;
 do
     echo $d
