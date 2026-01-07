@@ -85,6 +85,7 @@ def load_or_construct_graph(cfg):
         logger.info(f"loaded graph from: '{graph_filepath}'")
 
     graph.to("cuda")
+    torch.set_default_tensor_type('torch.cuda.FloatTensor')
     logger.info(f"Graph on GPU")
     return graph
 
