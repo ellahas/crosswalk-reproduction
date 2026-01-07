@@ -22,7 +22,8 @@ def estimate_node_colorfulness(g, node_idx, walk_length, walks_per_node, group_k
         float: The estimated colorfulness of this node.
     """
     # Obtain walks starting from source node
-    start_nodes = (torch.ones(walks_per_node) * node_idx).type(torch.int64)
+    start_nodes = (torch.ones(walks_per_node) * node_idx)
+    logger.info(f"start nodes on device: {start_nodes.device}")
     walks, _ = dgl.sampling.random_walk(g, start_nodes, length=walk_length, prob=prob)
 
     # Obtain groups of nodes visited
@@ -74,6 +75,7 @@ def get_crosswalk_weights(g, alpha, p, walk_length, walks_per_node, group_key, p
     # Pre-Compute colorfulness and normalization factors from formula (4) for each node
     colorfulnesses = torch.tensor([estimate_node_colorfulness(
         g, node, walk_length, walks_per_node, group_key, prob=None) for node in g.nodes()])
+    logger.info(f'colorfulness on device: {colorfulnesses.device}')
 
     # In the original implementation, 0.001 was added to all colorfulness estimates
     # This avoided edge cases when colorfulnesses are 0
@@ -83,6 +85,7 @@ def get_crosswalk_weights(g, alpha, p, walk_length, walks_per_node, group_key, p
 
     # Compute new weights
     new_weights = torch.empty_like(prior_weights)
+    logger.info(f"weights on device: {new_weights.device}")
     for source in g.nodes():
         source_group = g.ndata[group_key][source]
         all_neighbors = g.successors(source)
@@ -127,4 +130,5 @@ def get_crosswalk_weights(g, alpha, p, walk_length, walks_per_node, group_key, p
                     # Equation 4b, otherwise
                     else:
                         new_weights[g.edge_ids(source, nb)] = n / n_different_groups_in_neighborhood
+    logger.info('reweighted')
     return new_weights

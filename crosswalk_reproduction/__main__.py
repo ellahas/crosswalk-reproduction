@@ -115,6 +115,7 @@ def reweight_edges(cfg, graph):
                                                      cfg.GRAPH_KEYS.PRIOR_WEIGHTS_KEY,
                                                      use_original_crosswalk_implementation=cfg.GRAPH_WEIGHTING.USE_ORIGINAL_CROSSWALK_IMPLEMENTATION
                                                      )
+            logger.info("reweighted edges")
 
         elif cfg.GRAPH_WEIGHTING.METHOD == 'fairwalk':
             logger.info("performing edge reweighting with fairwalk")
