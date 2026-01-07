@@ -23,8 +23,8 @@ def estimate_node_colorfulness(g, node_idx, walk_length, walks_per_node, group_k
     """
     # Obtain walks starting from source node
     start_nodes = (torch.ones(walks_per_node) * node_idx).type(torch.int64)
-    logger.info(f"start nodes on device: {start_nodes.device}")
     walks, _ = dgl.sampling.random_walk(g, start_nodes, length=walk_length, prob=prob)
+    logger.info("colorfulness walks done")
 
     # Obtain groups of nodes visited
     visited_nodes = walks.flatten()
@@ -34,7 +34,7 @@ def estimate_node_colorfulness(g, node_idx, walk_length, walks_per_node, group_k
 
     # Compute colorfulness
     colorfulness = torch.sum(visited_groups != g.ndata[group_key][node_idx]) / len(visited_nodes)
-
+    logger.info(f'colorfulness calculated, on device: {colorfulness.device}')
     return colorfulness.item()
 
 
