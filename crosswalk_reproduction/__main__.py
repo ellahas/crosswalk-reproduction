@@ -60,11 +60,11 @@ def load_or_construct_graph(cfg):
                                    weight_key=cfg.GRAPH_KEYS.PRIOR_WEIGHTS_KEY,
                                    group_key=cfg.GRAPH_KEYS.GROUP_KEY)
             elif cfg.DATASET.lower() == 'deezer':
-                if not os.path.isfile(graph_filepath):
+                if not os.path.isfile('data/dgl_graphs/deezer/graph.bin'):
                     logger.info(f"generating: Deezer graph.bin")
                     path = "data/immutable/deezer/deezer_europe.links"
                     graph = read_graph(path)
-                    save_graphs(graph_filepath, [graph])
+                    save_graphs('data/dgl_graphs/deezer/graph.bin', [graph])
                 else:
                     logger.info(f"reading: {cfg.DATASET_PATHS.DEEZER}")
                     graph = read_graph(cfg.DATASET_PATHS.DEEZER,
