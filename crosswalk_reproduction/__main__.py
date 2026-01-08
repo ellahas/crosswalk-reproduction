@@ -74,7 +74,7 @@ def load_or_construct_graph(cfg):
                 if not os.path.isfile('data/dgl_graphs/pokec/graph.bin'):
                     logger.info(f"generating: Pokec graph.bin")
                     path = "data/immutable/pokec/pokec.links"
-                    graph = read_graph(path)
+                    graph = read_graph(path, attrpath=cfg.DATASET_PATHS.POKEC_REGION)
                     save_graphs('data/dgl_graphs/pokec/graph.bin', [graph])
                 else:
                     logger.info(f"reading: {cfg.DATASET_PATHS.POKEC_REGION}")

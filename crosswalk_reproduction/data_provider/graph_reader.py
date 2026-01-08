@@ -103,7 +103,7 @@ def read_links_file(link_filepath):
                     f"using {len(linkdata) - 2} edge attributes is not supported")
     return links
 
-def read_attr_links_graphs(link_filepath):
+def read_attr_links_graphs(link_filepath, attr_filepath):
     """read graph from .attr and .links file
 
     Args:
@@ -114,8 +114,9 @@ def read_attr_links_graphs(link_filepath):
         dict: dict of dicts attributes where each dict contains node information, node_index is key.
     """
     link_filepath = Path(link_filepath)
+    attr_filepath = Path(attr_filepath)
     # read node attributes
-    attributes = read_attr_file(link_filepath)
+    attributes = read_attr_file(attr_filepath)
     # read edges  attributes
     links = read_links_file(link_filepath)
 
@@ -298,7 +299,7 @@ def add_raw_attributes(graph, filepath):
     return graph
 
 
-def read_graph(filepath, weight_key="weights", group_key="groups", group_attribute=None):
+def read_graph(filepath, attrpath=None, weight_key="weights", group_key="groups", group_attribute=None):
     """Read graph from filepath
 
     Accepts multiple types of input file structures
@@ -310,9 +311,11 @@ def read_graph(filepath, weight_key="weights", group_key="groups", group_attribu
         _type_: _description_
     """
     filepath = Path(filepath)
+    if attrpath is None:
+        attrpath = filepath.with_suffix(".attr")
     # read graph like used in the original crosswalk repository
     if filepath.suffix == ".attr" or filepath.suffix == ".links":
-        links, attributes = read_attr_links_graphs(filepath.with_suffix(".links"))
+        links, attributes = read_attr_links_graphs(filepath.with_suffix(".links"), attrpath.with_suffix(".attr"))
         graph = graph_from_la(links, attributes, weight_key=weight_key, group_key=group_key)
 
         if "rice" in str(filepath):
