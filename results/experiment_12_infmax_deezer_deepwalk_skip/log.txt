@@ -1,0 +1,160 @@
+================================================================================
+--------------------------------------------------------------------------------
+|                         CROSSWALK REPRODUCTION SUITE                         |
+--------------------------------------------------------------------------------
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment start time: 2026-01-07 19:21:11.845398
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Repeating experiment config: 
+       'experiments/infmax_deezer_deepwalk_skip.yml' 
+5 times and averaging results
+================================================================================
+                        Performing experiment trial 1/5
+================================================================================
+reading: data/immutable/deezer/deezer_europe.attr
+number of attributed ids: 28281, ids with edges: 28281, number of links with attributes: 185504
+no edge weights given, initializing all as uniform normalized.
+loaded graph: deezer
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+using prior edge weights without reweighting..
+absolute difference between median of weights after reweighting: 0.0
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_12_infmax_deezer_deepwalk_skip/embeddings/emb_0_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing influence maximization task..
+Infected nodes fraction (%): 0.15558148580318942
+Infected nodes fraction per group (%):
+    Group 0:0.15244870446622372
+    Group 1:0.1595150795765221
+Disparity: 1.2483414299861164e-05
+================================================================================
+                        Performing experiment trial 2/5
+================================================================================
+reading: data/immutable/deezer/deezer_europe.attr
+number of attributed ids: 28281, ids with edges: 28281, number of links with attributes: 185504
+no edge weights given, initializing all as uniform normalized.
+loaded graph: deezer
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+using prior edge weights without reweighting..
+absolute difference between median of weights after reweighting: 0.0
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_12_infmax_deezer_deepwalk_skip/embeddings/emb_1_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing influence maximization task..
+Infected nodes fraction (%): 0.14497365722569924
+Infected nodes fraction per group (%):
+    Group 0:0.15244870446622372
+    Group 1:0.13558780774474144
+Disparity: 7.107245956312295e-05
+================================================================================
+                        Performing experiment trial 3/5
+================================================================================
+reading: data/immutable/deezer/deezer_europe.attr
+number of attributed ids: 28281, ids with edges: 28281, number of links with attributes: 185504
+no edge weights given, initializing all as uniform normalized.
+loaded graph: deezer
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+using prior edge weights without reweighting..
+absolute difference between median of weights after reweighting: 0.0
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_12_infmax_deezer_deepwalk_skip/embeddings/emb_2_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing influence maximization task..
+Infected nodes fraction (%): 0.14143771436653582
+Infected nodes fraction per group (%):
+    Group 0:0.15244870446622372
+    Group 1:0.12761205434799194
+Disparity: 0.0001542147972738656
+================================================================================
+                        Performing experiment trial 4/5
+================================================================================
+reading: data/immutable/deezer/deezer_europe.attr
+number of attributed ids: 28281, ids with edges: 28281, number of links with attributes: 185504
+no edge weights given, initializing all as uniform normalized.
+loaded graph: deezer
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+using prior edge weights without reweighting..
+absolute difference between median of weights after reweighting: 0.0
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_12_infmax_deezer_deepwalk_skip/embeddings/emb_3_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing influence maximization task..
+Infected nodes fraction (%): 0.14143771436653582
+Infected nodes fraction per group (%):
+    Group 0:0.14609667705371976
+    Group 1:0.13558780774474144
+Disparity: 2.7609083538296614e-05
+================================================================================
+                        Performing experiment trial 5/5
+================================================================================
+reading: data/immutable/deezer/deezer_europe.attr
+number of attributed ids: 28281, ids with edges: 28281, number of links with attributes: 185504
+no edge weights given, initializing all as uniform normalized.
+loaded graph: deezer
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+using prior edge weights without reweighting..
+absolute difference between median of weights after reweighting: 0.0
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_12_infmax_deezer_deepwalk_skip/embeddings/emb_4_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing influence maximization task..
+Infected nodes fraction (%): 0.14850960008486264
+Infected nodes fraction per group (%):
+    Group 0:0.1842088531702757
+    Group 1:0.10368479415774345
+Disparity: 0.0016210310199634434
+================================================================================
+results for task influence maximization
+--------------------------------------------------------------------------------
+run 0:
+    infected_nodes_fraction: 0.15558148580318942
+    disparity: 1.2483414299861164e-05
+--------------------------------------------------------------------------------
+run 1:
+    infected_nodes_fraction: 0.14497365722569924
+    disparity: 7.107245956312295e-05
+--------------------------------------------------------------------------------
+run 2:
+    infected_nodes_fraction: 0.14143771436653582
+    disparity: 0.0001542147972738656
+--------------------------------------------------------------------------------
+run 3:
+    infected_nodes_fraction: 0.14143771436653582
+    disparity: 2.7609083538296614e-05
+--------------------------------------------------------------------------------
+run 4:
+    infected_nodes_fraction: 0.14850960008486264
+    disparity: 0.0016210310199634434
+================================================================================
+final mean of all runs:
+    infected_nodes_fraction: 0.1463880343693646
+    disparities: 0.00037728215492771795
+
+final std/var of all runs:
+    infected_nodes_fraction: std=0.005292114687279722, var=2.8006477863321757e-05
+    disparities: std=0.0006238243408015091, var=3.891568081764374e-07
+--------------------------------------------------------------------------------
+infected_nodes_fraction values raw:
+[0.15558148580318942, 0.14497365722569924, 0.14143771436653582, 0.14143771436653582, 0.14850960008486264]
+disparity values raw:
+[1.2483414299861164e-05, 7.107245956312295e-05, 0.0001542147972738656, 2.7609083538296614e-05, 0.0016210310199634434]
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment end time: 2026-01-07 19:49:10.464549
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

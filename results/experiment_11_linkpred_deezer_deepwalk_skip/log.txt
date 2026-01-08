@@ -1,0 +1,160 @@
+================================================================================
+--------------------------------------------------------------------------------
+|                         CROSSWALK REPRODUCTION SUITE                         |
+--------------------------------------------------------------------------------
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment start time: 2026-01-07 18:52:29.948929
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Repeating experiment config: 
+       'experiments/linkpred_deezer_deepwalk_skip.yml' 
+5 times and averaging results
+================================================================================
+                        Performing experiment trial 1/5
+================================================================================
+reading: data/immutable/deezer/deezer_europe.attr
+number of attributed ids: 28281, ids with edges: 28281, number of links with attributes: 185504
+no edge weights given, initializing all as uniform normalized.
+loaded graph: deezer
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+using prior edge weights without reweighting..
+absolute difference between median of weights after reweighting: 0.0
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_11_linkpred_deezer_deepwalk_skip/embeddings/emb_0_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 85.03805302333362
+Edge type 1 has accuracy: 85.29640751862974
+Edge type 2 has accuracy: 86.86304620968868
+Accuracy: 85.51560562772896
+Disparity: 0.6501893293116636
+================================================================================
+                        Performing experiment trial 2/5
+================================================================================
+reading: data/immutable/deezer/deezer_europe.attr
+number of attributed ids: 28281, ids with edges: 28281, number of links with attributes: 185504
+no edge weights given, initializing all as uniform normalized.
+loaded graph: deezer
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+using prior edge weights without reweighting..
+absolute difference between median of weights after reweighting: 0.0
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_11_linkpred_deezer_deepwalk_skip/embeddings/emb_1_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 85.46501920187009
+Edge type 1 has accuracy: 85.825762220612
+Edge type 2 has accuracy: 86.92746763190867
+Accuracy: 85.92259177402836
+Disparity: 0.38696063881929765
+================================================================================
+                        Performing experiment trial 3/5
+================================================================================
+reading: data/immutable/deezer/deezer_europe.attr
+number of attributed ids: 28281, ids with edges: 28281, number of links with attributes: 185504
+no edge weights given, initializing all as uniform normalized.
+loaded graph: deezer
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+using prior edge weights without reweighting..
+absolute difference between median of weights after reweighting: 0.0
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_11_linkpred_deezer_deepwalk_skip/embeddings/emb_2_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 84.99790707408957
+Edge type 1 has accuracy: 84.92906815020862
+Edge type 2 has accuracy: 86.14592035644667
+Accuracy: 85.18678238369898
+Disparity: 0.3114891761928669
+================================================================================
+                        Performing experiment trial 4/5
+================================================================================
+reading: data/immutable/deezer/deezer_europe.attr
+number of attributed ids: 28281, ids with edges: 28281, number of links with attributes: 185504
+no edge weights given, initializing all as uniform normalized.
+loaded graph: deezer
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+using prior edge weights without reweighting..
+absolute difference between median of weights after reweighting: 0.0
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_11_linkpred_deezer_deepwalk_skip/embeddings/emb_3_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 84.9293300995233
+Edge type 1 has accuracy: 85.07122190073447
+Edge type 2 has accuracy: 86.97894883591245
+Accuracy: 85.39431836558677
+Disparity: 0.8733880341124398
+================================================================================
+                        Performing experiment trial 5/5
+================================================================================
+reading: data/immutable/deezer/deezer_europe.attr
+number of attributed ids: 28281, ids with edges: 28281, number of links with attributes: 185504
+no edge weights given, initializing all as uniform normalized.
+loaded graph: deezer
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+using prior edge weights without reweighting..
+absolute difference between median of weights after reweighting: 0.0
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_11_linkpred_deezer_deepwalk_skip/embeddings/emb_4_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 85.67717063359035
+Edge type 1 has accuracy: 85.58312931226352
+Edge type 2 has accuracy: 87.03806612948041
+Accuracy: 85.89563904910787
+Disparity: 0.4419690514382187
+================================================================================
+results for task link prediciton
+--------------------------------------------------------------------------------
+run 0:
+    accuracy: 85.51560562772896
+    disparity: 0.6501893293116636
+--------------------------------------------------------------------------------
+run 1:
+    accuracy: 85.92259177402836
+    disparity: 0.38696063881929765
+--------------------------------------------------------------------------------
+run 2:
+    accuracy: 85.18678238369898
+    disparity: 0.3114891761928669
+--------------------------------------------------------------------------------
+run 3:
+    accuracy: 85.39431836558677
+    disparity: 0.8733880341124398
+--------------------------------------------------------------------------------
+run 4:
+    accuracy: 85.89563904910787
+    disparity: 0.4419690514382187
+================================================================================
+final average of all runs:
+    accuracy: 85.58298744003018
+    disparity: 0.5327992459748974
+
+final std/var of all runs:
+    accuracy: std=0.28642517601354633, var=0.082039381454391
+    disparity: std=0.2040971949020349, var=0.041655664966879224
+--------------------------------------------------------------------------------
+accuracy values raw:
+[85.51560562772896, 85.92259177402836, 85.18678238369898, 85.39431836558677, 85.89563904910787]
+disparity values raw:
+[0.6501893293116636, 0.38696063881929765, 0.3114891761928669, 0.8733880341124398, 0.4419690514382187]
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment end time: 2026-01-07 19:21:03.764378
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

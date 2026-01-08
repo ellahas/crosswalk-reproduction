@@ -1,0 +1,165 @@
+================================================================================
+--------------------------------------------------------------------------------
+|                         CROSSWALK REPRODUCTION SUITE                         |
+--------------------------------------------------------------------------------
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment start time: 2026-01-07 16:31:26.370366
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Repeating experiment config: 
+       'experiments/linkpred_deezer_deepwalk_crosswalk.yml' 
+5 times and averaging results
+================================================================================
+                        Performing experiment trial 1/5
+================================================================================
+reading: data/immutable/deezer/deezer_europe.attr
+number of attributed ids: 28281, ids with edges: 28281, number of links with attributes: 185504
+no edge weights given, initializing all as uniform normalized.
+loaded graph: deezer
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+performing edge reweighting with crosswalk
+reweighted edges
+absolute difference between median of weights after reweighting: 0.011826477944850922
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_7_linkpred_deezer_deepwalk_crosswalk/embeddings/emb_0_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 80.83967550388893
+Edge type 1 has accuracy: 82.77567807914629
+Edge type 2 has accuracy: 86.80274010904515
+Accuracy: 82.92814403536197
+Disparity: 6.169274894369238
+================================================================================
+                        Performing experiment trial 2/5
+================================================================================
+reading: data/immutable/deezer/deezer_europe.attr
+number of attributed ids: 28281, ids with edges: 28281, number of links with attributes: 185504
+no edge weights given, initializing all as uniform normalized.
+loaded graph: deezer
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+performing edge reweighting with crosswalk
+reweighted edges
+absolute difference between median of weights after reweighting: 0.011813953518867493
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_7_linkpred_deezer_deepwalk_crosswalk/embeddings/emb_1_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 81.0566037735849
+Edge type 1 has accuracy: 82.99588385804873
+Edge type 2 has accuracy: 86.7342686484234
+Accuracy: 83.09794620236106
+Disparity: 5.552467390875283
+================================================================================
+                        Performing experiment trial 3/5
+================================================================================
+reading: data/immutable/deezer/deezer_europe.attr
+number of attributed ids: 28281, ids with edges: 28281, number of links with attributes: 185504
+no edge weights given, initializing all as uniform normalized.
+loaded graph: deezer
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+performing edge reweighting with crosswalk
+reweighted edges
+absolute difference between median of weights after reweighting: 0.011844106018543243
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_7_linkpred_deezer_deepwalk_crosswalk/embeddings/emb_2_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 80.43460021813911
+Edge type 1 has accuracy: 82.29409803267755
+Edge type 2 has accuracy: 86.42370287939907
+Accuracy: 82.49690043663415
+Disparity: 6.264524333272255
+================================================================================
+                        Performing experiment trial 4/5
+================================================================================
+reading: data/immutable/deezer/deezer_europe.attr
+number of attributed ids: 28281, ids with edges: 28281, number of links with attributes: 185504
+no edge weights given, initializing all as uniform normalized.
+loaded graph: deezer
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+performing edge reweighting with crosswalk
+reweighted edges
+absolute difference between median of weights after reweighting: 0.01183568686246872
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_7_linkpred_deezer_deepwalk_crosswalk/embeddings/emb_3_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 80.48698853652414
+Edge type 1 has accuracy: 82.45907116605412
+Edge type 2 has accuracy: 87.27929931878215
+Accuracy: 82.75834186836289
+Disparity: 8.139910567202696
+================================================================================
+                        Performing experiment trial 5/5
+================================================================================
+reading: data/immutable/deezer/deezer_europe.attr
+number of attributed ids: 28281, ids with edges: 28281, number of links with attributes: 185504
+no edge weights given, initializing all as uniform normalized.
+loaded graph: deezer
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+performing edge reweighting with crosswalk
+reweighted edges
+absolute difference between median of weights after reweighting: 0.011838756501674652
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_7_linkpred_deezer_deepwalk_crosswalk/embeddings/emb_4_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 80.40053628288922
+Edge type 1 has accuracy: 82.42559109874826
+Edge type 2 has accuracy: 86.36174058112054
+Accuracy: 82.53732952401488
+Disparity: 6.125564048896121
+================================================================================
+results for task link prediciton
+--------------------------------------------------------------------------------
+run 0:
+    accuracy: 82.92814403536197
+    disparity: 6.169274894369238
+--------------------------------------------------------------------------------
+run 1:
+    accuracy: 83.09794620236106
+    disparity: 5.552467390875283
+--------------------------------------------------------------------------------
+run 2:
+    accuracy: 82.49690043663415
+    disparity: 6.264524333272255
+--------------------------------------------------------------------------------
+run 3:
+    accuracy: 82.75834186836289
+    disparity: 8.139910567202696
+--------------------------------------------------------------------------------
+run 4:
+    accuracy: 82.53732952401488
+    disparity: 6.125564048896121
+================================================================================
+final average of all runs:
+    accuracy: 82.76373241334699
+    disparity: 6.450348246923118
+
+final std/var of all runs:
+    accuracy: std=0.2285680066371369, var=0.05224333365807425
+    disparity: std=0.8808891414308777, var=0.775965679490829
+--------------------------------------------------------------------------------
+accuracy values raw:
+[82.92814403536197, 83.09794620236106, 82.49690043663415, 82.75834186836289, 82.53732952401488]
+disparity values raw:
+[6.169274894369238, 5.552467390875283, 6.264524333272255, 8.139910567202696, 6.125564048896121]
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment end time: 2026-01-07 17:11:55.968160
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

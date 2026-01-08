@@ -1,0 +1,180 @@
+================================================================================
+--------------------------------------------------------------------------------
+|                         CROSSWALK REPRODUCTION SUITE                         |
+--------------------------------------------------------------------------------
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment start time: 2026-01-07 16:27:24.033267
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Repeating experiment config: 
+       'experiments/linkpred_rice_deepwalk_fairwalk.yml' 
+5 times and averaging results
+================================================================================
+                        Performing experiment trial 1/5
+================================================================================
+reading: data/immutable/rice/rice_subset.attr
+number of attributed ids: 445, ids with edges: 439, number of links with attributes: 19320
+Found unconnected nodes in graph! Removing 6 unconnected nodes
+no edge weights given, initializing all as uniform normalized.
+detected rice_raw dataset!
+before rice parsing! num nodes:439, num edges:19320
+after rice parsing! num nodes:439, num edges:19320
+loaded graph: rice
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=439, num_edges=19320
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.006987578235566616
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_3_linkpred_rice_deepwalk_fairwalk/embeddings/emb_0_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 57.98479087452472
+Edge type 1 has accuracy: 56.868395773294914
+Edge type 2 has accuracy: 51.29533678756477
+Accuracy: 57.34989648033127
+Disparity: 8.561568940224728
+================================================================================
+                        Performing experiment trial 2/5
+================================================================================
+reading: data/immutable/rice/rice_subset.attr
+number of attributed ids: 445, ids with edges: 439, number of links with attributes: 19320
+Found unconnected nodes in graph! Removing 6 unconnected nodes
+no edge weights given, initializing all as uniform normalized.
+detected rice_raw dataset!
+before rice parsing! num nodes:439, num edges:19320
+after rice parsing! num nodes:439, num edges:19320
+loaded graph: rice
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=439, num_edges=19320
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.006987578235566616
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_3_linkpred_rice_deepwalk_fairwalk/embeddings/emb_1_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 57.30080060998857
+Edge type 1 has accuracy: 56.74641148325359
+Edge type 2 has accuracy: 52.55102040816326
+Accuracy: 56.909937888198755
+Disparity: 4.496562838049026
+================================================================================
+                        Performing experiment trial 3/5
+================================================================================
+reading: data/immutable/rice/rice_subset.attr
+number of attributed ids: 445, ids with edges: 439, number of links with attributes: 19320
+Found unconnected nodes in graph! Removing 6 unconnected nodes
+no edge weights given, initializing all as uniform normalized.
+detected rice_raw dataset!
+before rice parsing! num nodes:439, num edges:19320
+after rice parsing! num nodes:439, num edges:19320
+loaded graph: rice
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=439, num_edges=19320
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.006987578235566616
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_3_linkpred_rice_deepwalk_fairwalk/embeddings/emb_2_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 59.14796500570559
+Edge type 1 has accuracy: 55.29865125240848
+Edge type 2 has accuracy: 52.79187817258884
+Accuracy: 57.789855072463766
+Disparity: 6.833440830572326
+================================================================================
+                        Performing experiment trial 4/5
+================================================================================
+reading: data/immutable/rice/rice_subset.attr
+number of attributed ids: 445, ids with edges: 439, number of links with attributes: 19320
+Found unconnected nodes in graph! Removing 6 unconnected nodes
+no edge weights given, initializing all as uniform normalized.
+detected rice_raw dataset!
+before rice parsing! num nodes:439, num edges:19320
+after rice parsing! num nodes:439, num edges:19320
+loaded graph: rice
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=439, num_edges=19320
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.006987578235566616
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_3_linkpred_rice_deepwalk_fairwalk/embeddings/emb_3_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 55.46282245827011
+Edge type 1 has accuracy: 55.868089233753636
+Edge type 2 has accuracy: 54.82233502538071
+Accuracy: 55.53830227743271
+Disparity: 0.18534079725886174
+================================================================================
+                        Performing experiment trial 5/5
+================================================================================
+reading: data/immutable/rice/rice_subset.attr
+number of attributed ids: 445, ids with edges: 439, number of links with attributes: 19320
+Found unconnected nodes in graph! Removing 6 unconnected nodes
+no edge weights given, initializing all as uniform normalized.
+detected rice_raw dataset!
+before rice parsing! num nodes:439, num edges:19320
+after rice parsing! num nodes:439, num edges:19320
+loaded graph: rice
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=439, num_edges=19320
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.006987578235566616
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_3_linkpred_rice_deepwalk_fairwalk/embeddings/emb_4_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 58.59315589353612
+Edge type 1 has accuracy: 57.11538461538461
+Edge type 2 has accuracy: 56.18556701030928
+Accuracy: 58.07453416149069
+Disparity: 0.9827614399861169
+================================================================================
+results for task link prediciton
+--------------------------------------------------------------------------------
+run 0:
+    accuracy: 57.34989648033127
+    disparity: 8.561568940224728
+--------------------------------------------------------------------------------
+run 1:
+    accuracy: 56.909937888198755
+    disparity: 4.496562838049026
+--------------------------------------------------------------------------------
+run 2:
+    accuracy: 57.789855072463766
+    disparity: 6.833440830572326
+--------------------------------------------------------------------------------
+run 3:
+    accuracy: 55.53830227743271
+    disparity: 0.18534079725886174
+--------------------------------------------------------------------------------
+run 4:
+    accuracy: 58.07453416149069
+    disparity: 0.9827614399861169
+================================================================================
+final average of all runs:
+    accuracy: 57.13250517598344
+    disparity: 4.211934969218212
+
+final std/var of all runs:
+    accuracy: std=0.8896972018033924, var=0.7915611108967864
+    disparity: std=3.240791384650154, var=10.502728798822664
+--------------------------------------------------------------------------------
+accuracy values raw:
+[57.34989648033127, 56.909937888198755, 57.789855072463766, 55.53830227743271, 58.07453416149069]
+disparity values raw:
+[8.561568940224728, 4.496562838049026, 6.833440830572326, 0.18534079725886174, 0.9827614399861169]
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment end time: 2026-01-07 16:28:35.885788
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
