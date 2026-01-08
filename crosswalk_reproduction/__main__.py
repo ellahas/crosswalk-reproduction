@@ -52,8 +52,9 @@ def load_or_construct_graph(cfg):
         else:
             if not os.path.isfile(graph_filepath):
                 logger.info(f"generating DGL: {graph_filepath}")
-                links_path = cfg.DATASET_PATHS.DICT[cfg.DATASET.lower()]['links']
-                attr_path = cfg.DATASET_PATHS.DICT[cfg.DATASET.lower()]['attrs']
+                data_idx = cfg.DATASET_PATHS.DATASETS.index(cfg.DATASET.lower())
+                links_path = cfg.DATASET_PATHS.LINK_PATHS[data_idx]
+                attr_path = cfg.DATASET_PATHS.ATTR_PATHS[data_idx]
                 graph = read_graph(links_path, attr_path)
                 save_graphs(graph_filepath, [graph])
             else:
