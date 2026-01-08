@@ -313,6 +313,8 @@ def read_graph(filepath, attrpath=None, weight_key="weights", group_key="groups"
     filepath = Path(filepath)
     if attrpath is None:
         attrpath = filepath.with_suffix(".attr")
+    else:
+        attrpath = Path(attrpath)
     # read graph like used in the original crosswalk repository
     if filepath.suffix == ".attr" or filepath.suffix == ".links":
         links, attributes = read_attr_links_graphs(filepath.with_suffix(".links"), attrpath.with_suffix(".attr"))
