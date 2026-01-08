@@ -40,60 +40,35 @@ def set_seed(seed):
 
 
 def load_or_construct_graph(cfg):
-    graph_filepath = str(Path(cfg.EXPERIMENT_PATH) / "graph" / "graph.bin")
+    graph_filepath_experiment = str(Path(cfg.EXPERIMENT_PATH) / "graph" / "graph.bin")
     # if not resuming
     if cfg.RESUME == -1:
+        graph_filepath = f"data/dgl_graphs/{cfg.DATASET.lower()}/graph.bin"
         if cfg.DATASET.lower() == "synthetic":
             logger.info("Generating new graph..")
             graph = synthesize_graph(cfg.SYNTHETIC.NODES, torch.Tensor(cfg.SYNTHETIC.EDGE_PROBABILITIES),
                                      self_connection_prob=cfg.SYNTHETIC.SELF_CONNECT_PROB, directed=cfg.SYNTHETIC.DIRECTED,
                                      init_weights_strategy=cfg.SYNTHETIC.INIT_WEIGHTS_STRATEGY, weight_key=cfg.GRAPH_KEYS.PRIOR_WEIGHTS_KEY, group_key=cfg.GRAPH_KEYS.GROUP_KEY)
         else:
-            if cfg.DATASET.lower() == 'rice':
-                logger.info(f"reading: {cfg.DATASET_PATHS.RICE}")
-                graph = read_graph(cfg.DATASET_PATHS.RICE,
-                                   weight_key=cfg.GRAPH_KEYS.PRIOR_WEIGHTS_KEY,
-                                   group_key=cfg.GRAPH_KEYS.GROUP_KEY)
-            elif cfg.DATASET.lower() == 'twitter':
-                logger.info(f"reading: {cfg.DATASET_PATHS.TWITTER}")
-                graph = read_graph(cfg.DATASET_PATHS.TWITTER,
-                                   weight_key=cfg.GRAPH_KEYS.PRIOR_WEIGHTS_KEY,
-                                   group_key=cfg.GRAPH_KEYS.GROUP_KEY)
-            elif cfg.DATASET.lower() == 'deezer':
-                if not os.path.isfile('data/dgl_graphs/deezer/graph.bin'):
-                    logger.info(f"generating: Deezer graph.bin")
-                    path = "data/immutable/deezer/deezer_europe.links"
-                    graph = read_graph(path)
-                    save_graphs('data/dgl_graphs/deezer/graph.bin', [graph])
-                else:
-                    logger.info(f"reading: {cfg.DATASET_PATHS.DEEZER}")
-                    graph = read_graph(cfg.DATASET_PATHS.DEEZER,
-                                    weight_key=cfg.GRAPH_KEYS.PRIOR_WEIGHTS_KEY,
-                                    group_key=cfg.GRAPH_KEYS.GROUP_KEY)
-            elif cfg.DATASET.lower() == 'pokec_region':
-                if not os.path.isfile('data/dgl_graphs/pokec/graph.bin'):
-                    logger.info(f"generating: Pokec graph.bin")
-                    path = "data/immutable/pokec/pokec.links"
-                    graph = read_graph(path, attrpath=cfg.DATASET_PATHS.POKEC_REGION)
-                    save_graphs('data/dgl_graphs/pokec/graph.bin', [graph])
-                else:
-                    logger.info(f"reading: {cfg.DATASET_PATHS.POKEC_REGION}")
-                    graph = read_graph(cfg.DATASET_PATHS.POKEC_REGION,
-                                    weight_key=cfg.GRAPH_KEYS.PRIOR_WEIGHTS_KEY,
-                                    group_key=cfg.GRAPH_KEYS.GROUP_KEY)
+            if not os.path.isfile(graph_filepath):
+                logger.info(f"generating DGL: {graph_filepath}")
+                links_path = cfg.DATASET_PATHS.DICT[cfg.DATASET.lower()]['links']
+                attr_path = cfg.DATASET_PATHS.DICT[cfg.DATASET.lower()]['attrs']
+                graph = read_graph(links_path, attr_path)
+                save_graphs(graph_filepath, [graph])
             else:
-                raise NotImplementedError(f"no known dataset: {cfg.DATASET}")
-            logger.info(f"loaded graph: {cfg.DATASET.lower()}")
+                graph = load_graphs(graph_filepath)[0][0]
+                logger.info(f'loaded graph: {graph_filepath}')
 
         # save graph
-        save_graphs(graph_filepath, [graph], labels=None)
+        save_graphs(graph_filepath_experiment, [graph], labels=None)
         logger.info("saved graph")
     # if resuming
     else:
         # load graph,
         # we assume each graph.bin file only contains one graph, hence the [0][0]
-        graph = load_graphs(graph_filepath)[0][0]
-        logger.info(f"loaded graph from: '{graph_filepath}'")
+        graph = load_graphs(graph_filepath_experiment)[0][0]
+        logger.info(f"loaded graph from: '{graph_filepath_experiment}'")
 
     logger.info(f"Graph on device: {graph.device}")
     return graph
