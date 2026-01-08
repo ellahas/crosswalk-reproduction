@@ -52,6 +52,7 @@ _C.DATASET_PATHS.RICE = 'data/immutable/rice/rice_subset.attr'
 _C.DATASET_PATHS.RICE_RAW = 'data/immutable/rice/rice_raw.attr'  # contains the missing attributes
 _C.DATASET_PATHS.TWITTER = 'data/immutable/twitter/sample_4000.attr'
 _C.DATASET_PATHS.DEEZER = 'data/immutable/deezer/deezer_europe.attr'
+_C.DATASET_PATHS.POKEC_REGION = 'data/immutable/pokec/pokec_region.attr'
 
 _C.GRAPH_KEYS = CN()
 _C.GRAPH_KEYS.GROUP_KEY = "groups"
@@ -166,7 +167,7 @@ def verify_config(cfg):
     """
     cfg.DATASET = cfg.DATASET.lower()
     cfg.TASK = cfg.TASK.lower()
-    assert cfg.DATASET in ['rice', 'twitter', 'synthetic', 'deezer']
+    assert cfg.DATASET in ['rice', 'twitter', 'synthetic', 'deezer', 'pokec']
     assert cfg.TASK in ['linkpred', 'infmax', 'nodeclass', 'all']
     assert cfg.GRAPH_WEIGHTING.METHOD in ['crosswalk', 'fairwalk', 'skip']
     assert cfg.RUNS > 0
