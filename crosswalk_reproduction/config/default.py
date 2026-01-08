@@ -52,7 +52,7 @@ _C.DATASET_PATHS.DATASETS = ['rice', 'twitter', 'deezer', 'pokec_region']
 _C.DATASET_PATHS.ATTR_PATHS = ['data/immutable/rice/rice_subset.attr', 'data/immutable/twitter/sample_4000.attr',
                                'data/immutable/deezer/deezer_europe.attr', 'data/immutable/pokec/pokec_region.attr']
 _C.DATASET_PATHS.RICE_RAW = 'data/immutable/rice/rice_raw.attr'  # contains the missing attributes
-_C.DATASET_PATHS_LINK_PATHS = ['data/immutable/rice/rice_subset.links', 'data/immutable/twitter/sample_4000.links',
+_C.DATASET_PATHS.LINK_PATHS = ['data/immutable/rice/rice_subset.links', 'data/immutable/twitter/sample_4000.links',
                                'data/immutable/deezer/deezer_europe.links', 'data/immutable/pokec/pokec.links']
 _C.GRAPH_KEYS = CN()
 _C.GRAPH_KEYS.GROUP_KEY = "groups"
@@ -150,7 +150,7 @@ def str_to_pathlib(cfg):
         cfg (yacs.config.CfgNode): The original config.
     """
     cfg.BASEDIR = str(Path(cfg.BASEDIR))
-    for i in range(cfg.DATASET_PATHS.LINK_PATHS):
+    for i in range(len(cfg.DATASET_PATHS.LINK_PATHS)):
         cfg.DATASET_PATHS.LINK_PATHS[i] = str(cfg.DATASET_PATHS.LINK_PATHS[i])
         cfg.DATASET_PATHS.ATTR_PATHS[i] = str(cfg.DATASET_PATHS.ATTR_PATHS[i])
 
