@@ -150,8 +150,9 @@ def str_to_pathlib(cfg):
         cfg (yacs.config.CfgNode): The original config.
     """
     cfg.BASEDIR = str(Path(cfg.BASEDIR))
-    cfg.DATASET_PATHS.RICE = str(Path(cfg.DATASET_PATHS.RICE))
-    cfg.DATASET_PATHS.TWITTER = str(Path(cfg.DATASET_PATHS.TWITTER))
+    for i in range(cfg.DATASET_PATHS.LINK_PATHS):
+        cfg.DATASET_PATHS.LINK_PATHS[i] = str(cfg.DATASET_PATHS.LINK_PATHS[i])
+        cfg.DATASET_PATHS.ATTR_PATHS[i] = str(cfg.DATASET_PATHS.ATTR_PATHS[i])
 
     return cfg
 
