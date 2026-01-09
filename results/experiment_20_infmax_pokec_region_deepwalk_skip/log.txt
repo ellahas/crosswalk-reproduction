@@ -1,0 +1,37 @@
+================================================================================
+--------------------------------------------------------------------------------
+|                         CROSSWALK REPRODUCTION SUITE                         |
+--------------------------------------------------------------------------------
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment start time: 2026-01-08 12:46:37.678111
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Repeating experiment config: 
+       'experiments/infmax_pokec_region_deepwalk_skip.yml' 
+5 times and averaging results
+================================================================================
+                        Performing experiment trial 1/5
+================================================================================
+generating: Pokec graph.bin
+number of attributed ids: 67796, ids with edges: 67796, number of links with attributes: 1235916
+no edge weights given, initializing all as uniform normalized.
+loaded graph: pokec_region
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=67796, num_edges=1235916
+using prior edge weights without reweighting..
+absolute difference between median of weights after reweighting: 0.0
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_20_infmax_pokec_region_deepwalk_skip/embeddings/emb_0_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing influence maximization task..
+Infected nodes fraction (%): 0.06195055755501799
+Infected nodes fraction per group (%):
+    Group 0:0.07961421506479383
+    Group 1:0.029369807452894747
+Disparity: 0.0006311251240676655
+================================================================================
+                        Performing experiment trial 2/5
+================================================================================
+reading: data/immutable/pokec/pokec_region.attr
