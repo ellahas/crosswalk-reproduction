@@ -135,6 +135,12 @@ def read_pt_graph(pt_filepath):
                     "edge_attributes": 1.0  # default edge attribute is 1.0
                 }
         links.append(link_dict)
+        link_dict = {
+                    "source_id": int(link_data[1, i]),
+                    "target_id": int(link_data[0, i]),
+                    "edge_attributes": 1.0  # default edge attribute is 1.0
+                }  # add every link the other way too to make graph undirected
+        links.append(link_dict)
     attr_data = data['sens']
     attributes = {i: torch.Tensor([a]) for i, a in enumerate(attr_data)}
     labels = data['labels']
