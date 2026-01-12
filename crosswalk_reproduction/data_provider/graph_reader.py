@@ -136,7 +136,7 @@ def read_pt_graph(pt_filepath):
                 }
         links.append(link_dict)
     attr_data = data['sens']
-    attributes = {i: a for i, a in enumerate(attr_data)}
+    attributes = {i: torch.Tensor([a]) for i, a in enumerate(attr_data)}
     labels = data['labels']
     features = data['features']
     return links, attributes, labels, features
