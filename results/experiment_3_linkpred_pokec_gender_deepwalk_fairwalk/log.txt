@@ -1,0 +1,145 @@
+================================================================================
+--------------------------------------------------------------------------------
+|                         CROSSWALK REPRODUCTION SUITE                         |
+--------------------------------------------------------------------------------
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment start time: 2026-01-12 13:36:10.646895
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Repeating experiment config: 
+       'experiments/linkpred_rice_deepwalk_fairwalk.yml' 
+5 times and averaging results
+================================================================================
+                        Performing experiment trial 1/5
+================================================================================
+loaded graph: data/dgl_graphs/pokec_gender/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=69949, num_edges=260044
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.03333333134651184
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_3_linkpred_pokec_gender_deepwalk_fairwalk/embeddings/emb_0_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 90.95163806552262
+Edge type 1 has accuracy: 86.81814974243173
+Edge type 2 has accuracy: 90.47867581270505
+Accuracy: 88.57719669294366
+Disparity: 3.4120966800966244
+================================================================================
+                        Performing experiment trial 2/5
+================================================================================
+loaded graph: data/dgl_graphs/pokec_gender/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=69949, num_edges=260044
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.03333333134651184
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_3_linkpred_pokec_gender_deepwalk_fairwalk/embeddings/emb_1_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 90.55940642389925
+Edge type 1 has accuracy: 85.80715825177543
+Edge type 2 has accuracy: 89.50534759358288
+Accuracy: 87.70044222264949
+Disparity: 4.152389679453361
+================================================================================
+                        Performing experiment trial 3/5
+================================================================================
+loaded graph: data/dgl_graphs/pokec_gender/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=69949, num_edges=260044
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.03333333134651184
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_3_linkpred_pokec_gender_deepwalk_fairwalk/embeddings/emb_2_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 91.12777561355668
+Edge type 1 has accuracy: 86.13564111621336
+Edge type 2 has accuracy: 89.81536628945801
+Accuracy: 88.07152470678716
+Disparity: 4.464911380461852
+================================================================================
+                        Performing experiment trial 4/5
+================================================================================
+loaded graph: data/dgl_graphs/pokec_gender/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=69949, num_edges=260044
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.03333333134651184
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_3_linkpred_pokec_gender_deepwalk_fairwalk/embeddings/emb_3_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 90.61922815203654
+Edge type 1 has accuracy: 86.462681287584
+Edge type 2 has accuracy: 89.83126440199212
+Accuracy: 88.15612382234185
+Disparity: 3.249457878494415
+================================================================================
+                        Performing experiment trial 5/5
+================================================================================
+loaded graph: data/dgl_graphs/pokec_gender/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=69949, num_edges=260044
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.03333333134651184
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_3_linkpred_pokec_gender_deepwalk_fairwalk/embeddings/emb_4_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 91.14699873528554
+Edge type 1 has accuracy: 87.32210333015503
+Edge type 2 has accuracy: 90.65901297152229
+Accuracy: 88.93866564122284
+Disparity: 2.8892134356082
+================================================================================
+results for task link prediciton
+--------------------------------------------------------------------------------
+run 0:
+    accuracy: 88.57719669294366
+    disparity: 3.4120966800966244
+--------------------------------------------------------------------------------
+run 1:
+    accuracy: 87.70044222264949
+    disparity: 4.152389679453361
+--------------------------------------------------------------------------------
+run 2:
+    accuracy: 88.07152470678716
+    disparity: 4.464911380461852
+--------------------------------------------------------------------------------
+run 3:
+    accuracy: 88.15612382234185
+    disparity: 3.249457878494415
+--------------------------------------------------------------------------------
+run 4:
+    accuracy: 88.93866564122284
+    disparity: 2.8892134356082
+================================================================================
+final average of all runs:
+    accuracy: 88.288790617189
+    disparity: 3.633613810822891
+
+final std/var of all runs:
+    accuracy: std=0.4281295128883704, var=0.18329487980603335
+    disparity: std=0.5849720658850426, var=0.34219231786581455
+--------------------------------------------------------------------------------
+accuracy values raw:
+[88.57719669294366, 87.70044222264949, 88.07152470678716, 88.15612382234185, 88.93866564122284]
+disparity values raw:
+[3.4120966800966244, 4.152389679453361, 4.464911380461852, 3.249457878494415, 2.8892134356082]
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment end time: 2026-01-12 14:12:17.389413
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
