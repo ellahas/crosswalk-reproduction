@@ -1,0 +1,145 @@
+================================================================================
+--------------------------------------------------------------------------------
+|                         CROSSWALK REPRODUCTION SUITE                         |
+--------------------------------------------------------------------------------
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment start time: 2026-01-08 16:14:30.269848
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Repeating experiment config: 
+       'experiments/infmax_pokec_region_deepwalk_fairwalk.yml' 
+5 times and averaging results
+================================================================================
+                        Performing experiment trial 1/5
+================================================================================
+loaded graph: data/dgl_graphs/pokec_region/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=67796, num_edges=1235916
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.005769230425357819
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_28_infmax_pokec_region_deepwalk_fairwalk/embeddings/emb_0_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing influence maximization task..
+Infected nodes fraction (%): 0.06195055755501799
+Infected nodes fraction per group (%):
+    Group 0:0.07506482652388513
+    Group 1:0.037761181010864675
+Disparity: 0.0003478904921402728
+================================================================================
+                        Performing experiment trial 2/5
+================================================================================
+loaded graph: data/dgl_graphs/pokec_region/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=67796, num_edges=1235916
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.005769230425357819
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_28_infmax_pokec_region_deepwalk_fairwalk/embeddings/emb_1_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing influence maximization task..
+Infected nodes fraction (%): 0.06047554427989852
+Infected nodes fraction per group (%):
+    Group 0:0.07051544380374253
+    Group 1:0.04195686778984964
+Disparity: 0.00020389806598532456
+================================================================================
+                        Performing experiment trial 3/5
+================================================================================
+loaded graph: data/dgl_graphs/pokec_region/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=67796, num_edges=1235916
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.005769230425357819
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_28_infmax_pokec_region_deepwalk_fairwalk/embeddings/emb_2_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing influence maximization task..
+Infected nodes fraction (%): 0.06195055755501799
+Infected nodes fraction per group (%):
+    Group 0:0.07279013516381383
+    Group 1:0.04195686778984964
+Disparity: 0.00023767259423859114
+================================================================================
+                        Performing experiment trial 4/5
+================================================================================
+loaded graph: data/dgl_graphs/pokec_region/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=67796, num_edges=1235916
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.005769230425357819
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_28_infmax_pokec_region_deepwalk_fairwalk/embeddings/emb_3_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing influence maximization task..
+Infected nodes fraction (%): 0.06047554427989852
+Infected nodes fraction per group (%):
+    Group 0:0.07051544380374253
+    Group 1:0.04195686778984964
+Disparity: 0.00020389806598532456
+================================================================================
+                        Performing experiment trial 5/5
+================================================================================
+loaded graph: data/dgl_graphs/pokec_region/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=67796, num_edges=1235916
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.005769230425357819
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_28_infmax_pokec_region_deepwalk_fairwalk/embeddings/emb_4_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing influence maximization task..
+Infected nodes fraction (%): 0.0678506106554959
+Infected nodes fraction per group (%):
+    Group 0:0.06141667836345732
+    Group 1:0.07971805171109736
+Disparity: 8.373506660242728e-05
+================================================================================
+results for task influence maximization
+--------------------------------------------------------------------------------
+run 0:
+    infected_nodes_fraction: 0.06195055755501799
+    disparity: 0.0003478904921402728
+--------------------------------------------------------------------------------
+run 1:
+    infected_nodes_fraction: 0.06047554427989852
+    disparity: 0.00020389806598532456
+--------------------------------------------------------------------------------
+run 2:
+    infected_nodes_fraction: 0.06195055755501799
+    disparity: 0.00023767259423859114
+--------------------------------------------------------------------------------
+run 3:
+    infected_nodes_fraction: 0.06047554427989852
+    disparity: 0.00020389806598532456
+--------------------------------------------------------------------------------
+run 4:
+    infected_nodes_fraction: 0.0678506106554959
+    disparity: 8.373506660242728e-05
+================================================================================
+final mean of all runs:
+    infected_nodes_fraction: 0.06254056286506579
+    disparities: 0.00021541885699038807
+
+final std/var of all runs:
+    infected_nodes_fraction: std=0.002735742077849933, var=7.4842847165186685e-06
+    disparities: std=8.443937569937539e-05, var=7.1300081685002676e-09
+--------------------------------------------------------------------------------
+infected_nodes_fraction values raw:
+[0.06195055755501799, 0.06047554427989852, 0.06195055755501799, 0.06047554427989852, 0.0678506106554959]
+disparity values raw:
+[0.0003478904921402728, 0.00020389806598532456, 0.00023767259423859114, 0.00020389806598532456, 8.373506660242728e-05]
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment end time: 2026-01-08 17:07:21.826662
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
