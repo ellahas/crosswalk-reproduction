@@ -1,7 +1,7 @@
 #!/bin/bash
-models=("deepwalk_crosswalk" "deepwalk_fairwalk" "deepwalk_skip")
-data=("rice" "deezer")
-tasks=("linkpred" "infmax")
+models=("deepwalk_skip" "deepwalk_fairwalk" "deepwalk_crosswalk")
+data=("pokec_gender")
+tasks=("infmax" "linkpred")
 for d in "${data[@]}";
 do
     echo $d
@@ -11,7 +11,7 @@ do
         for t in "${tasks[@]}";
         do
             echo $t
-            uv run xwalk_reprod --cfg "experiments/${t}_${d}_${m}.yml"
+            uv run xwalk_reprod --cfg "experiments/${t}_rice_${m}.yml" --opts DATASET $d
         done
     done
 done
