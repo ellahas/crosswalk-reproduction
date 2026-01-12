@@ -137,7 +137,9 @@ def read_pt_graph(pt_filepath):
         links.append(link_dict)
     attr_data = data['sens']
     attributes = {i: a for i, a in enumerate(attr_data)}
-    return links, attributes
+    labels = data['labels']
+    features = data['features']
+    return links, attributes, labels, features
 
 
 def graph_from_la(links, attributes, weight_key="weights", group_key="groups"):
@@ -344,7 +346,10 @@ def read_graph(filepath, attrpath=None, weight_key="weights", group_key="groups"
             graph = set_group_rice(graph, group_attribute, group_key)
             logger.info(f"after rice parsing! num nodes:{graph.num_nodes()}, num edges:{graph.num_edges()}")
     elif filepath.suffix == '.pt':
-        links, attributes = read_pt_graph(filepath)
+        links, attributes, labels, features = read_pt_graph(filepath)
         graph = graph_from_la(links, attributes, weight_key=weight_key, group_key=group_key)
+        # assume no nodes are removed and order of nodes is maintained
+        graph.ndata['labels'] = labels
+        graph.ndata['features'] = features
 
     return graph
