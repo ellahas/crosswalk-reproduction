@@ -48,12 +48,14 @@ _C.DATASET = "synthetic"
 _C.EXTRA_LOG_NAME = "" 
 
 _C.DATASET_PATHS = CN()
-_C.DATASET_PATHS.DATASETS = ['rice', 'twitter', 'deezer', 'pokec_region']
+_C.DATASET_PATHS.DATASETS = ['rice', 'twitter', 'deezer', 'pokec_region', 'pokec_gender']
 _C.DATASET_PATHS.ATTR_PATHS = ['data/immutable/rice/rice_subset.attr', 'data/immutable/twitter/sample_4000.attr',
-                               'data/immutable/deezer/deezer_europe.attr', 'data/immutable/pokec/pokec_region.attr']
+                               'data/immutable/deezer/deezer_europe.attr', 'data/immutable/pokec/pokec_region.attr',
+                               'no_separate_attr_file']
 _C.DATASET_PATHS.RICE_RAW = 'data/immutable/rice/rice_raw.attr'  # contains the missing attributes
 _C.DATASET_PATHS.LINK_PATHS = ['data/immutable/rice/rice_subset.links', 'data/immutable/twitter/sample_4000.links',
-                               'data/immutable/deezer/deezer_europe.links', 'data/immutable/pokec/pokec.links']
+                               'data/immutable/deezer/deezer_europe.links', 'data/immutable/pokec/pokec.links',
+                               'data/immutable/pokec/pokec_processed.pt']
 _C.GRAPH_KEYS = CN()
 _C.GRAPH_KEYS.GROUP_KEY = "groups"
 # Key for the weights to use in case the loaded graph already has edge weights

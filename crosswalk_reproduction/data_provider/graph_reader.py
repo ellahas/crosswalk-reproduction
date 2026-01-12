@@ -123,6 +123,23 @@ def read_attr_links_graphs(link_filepath, attr_filepath):
     return links, attributes
 
 
+def read_pt_graph(pt_filepath):
+    """Read a .pt file containing link and attribute information"""
+    data = torch.load(Path(pt_filepath).with_suffix('.pt'))
+    link_data = data['edge_index']
+    links = []
+    for i in range(link_data.size(1)):
+        link_dict = {
+                    "source_id": int(link_data[0, i]),
+                    "target_id": int(link_data[1, i]),
+                    "edge_attributes": 1.0  # default edge attribute is 1.0
+                }
+        links.append(link_dict)
+    attr_data = data['sens']
+    attributes = {i: a for i, a in enumerate(attr_data)}
+    return links, attributes
+
+
 def graph_from_la(links, attributes, weight_key="weights", group_key="groups"):
     """Construct graph from links and attributes files. 
 
@@ -326,5 +343,8 @@ def read_graph(filepath, attrpath=None, weight_key="weights", group_key="groups"
             logger.info(f"before rice parsing! num nodes:{graph.num_nodes()}, num edges:{graph.num_edges()}")
             graph = set_group_rice(graph, group_attribute, group_key)
             logger.info(f"after rice parsing! num nodes:{graph.num_nodes()}, num edges:{graph.num_edges()}")
+    elif filepath.suffix == '.pt':
+        links, attributes = read_pt_graph(filepath)
+        graph = graph_from_la(links, attributes, weight_key=weight_key, group_key=group_key)
 
     return graph
