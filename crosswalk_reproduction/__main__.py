@@ -307,7 +307,7 @@ def parse_linkpred_runs(results):
         logger.info("=" * 80)
 
 
-def parse_nodeclass_runs(results):
+def parse_nodeclass_runs(results, experiment_path=None):
     if 'nodeclass' in results[0]:
         logger.info("=" * 80)
         logger.info("results for task node classification")
@@ -323,6 +323,9 @@ def parse_nodeclass_runs(results):
 
             accuracies.append(task_res[run_idx]['accuracy_mean'])
             disparities.append(task_res[run_idx]['disparity'])
+            if experiment_path is not None:
+                file_path = Path(experiment_path) / "node_results" / f"results_{run_idx}.npz"
+                np.savez(file_path, y_test=task_res[run_idx]['y_test'], y_pred=task_res[run_idx]['y_pred'], nodes_test=task_res[run_idx]['nodes_test'])
 
         logger.info("=" * 80)
         logger.info("final average of all runs:")
@@ -355,7 +358,7 @@ def perform_multi_experiment(cfg):
     # parse results for multiple runs
     parse_infmax_runs(results)
     parse_linkpred_runs(results)
-    parse_nodeclass_runs(results)
+    parse_nodeclass_runs(results, cfg.EXPERIMENT_PATH)
     return results
 
 
@@ -447,7 +450,7 @@ def reproduce(cfg):
                 results = perform_experiment(cfg)
                 parse_infmax_runs([results])
                 parse_linkpred_runs([results])
-                parse_nodeclass_runs([results])
+                parse_nodeclass_runs([results], cfg.EXPERIMENT_PATH)
                 run_all_results.append([results, cfg])
             else:
                 logger.info(

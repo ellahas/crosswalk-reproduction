@@ -1,6 +1,6 @@
 from sklearn.semi_supervised import LabelPropagation
 from sklearn.metrics import pairwise_distances
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import ShuffleSplit
 from sklearn.metrics import accuracy_score
 import numpy as np
 
@@ -50,7 +50,12 @@ def perform_node_classification_single(graph, group_key, label_key, emb_key, tes
     y = np.stack((labels.numpy(), groups.numpy()), axis=1)
 
     # Split training and test set
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, shuffle=True)
+    splitter = ShuffleSplit(n_splits=1, test_size=test_size)
+    train_idx, test_idx = next(splitter.split(X, y))
+    X_train = X[train_idx]
+    X_test = X[test_idx]
+    y_train = y[train_idx]
+    y_test = y[test_idx]
 
     # Get gamma for Label Propagation
     gamma = np.mean(pairwise_distances(X))
@@ -86,7 +91,10 @@ def perform_node_classification_single(graph, group_key, label_key, emb_key, tes
     results = {
         "accuracies": accuracies,
         "accuracy_mean": accuracy,
-        "disparity": disparity
+        "disparity": disparity,
+        "y_test": y_test, 
+        "y_pred": pred, 
+        "nodes_test": test_idx
     }
 
     return results
