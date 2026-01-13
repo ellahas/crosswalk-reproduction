@@ -125,7 +125,7 @@ def reweight_edges(cfg, graph):
     return graph
 
 
-def add_embeddings(cfg, graph):
+def add_embeddings(cfg, graph, run_idx):
     # arguments for generating node embeddings
     embedding_args = {
         "method": cfg.EMBEDDINGS.METHOD,
@@ -159,7 +159,7 @@ def add_embeddings(cfg, graph):
     # if loading existing embedding
     elif (cfg.RESUME > -1 and cfg.STAGE == 2):
         emb_file = filename_parser.get_embedding_file(
-            cfg.EXPERIMENT_PATH, cfg.EMBEDDINGS.EMBEDDING_ID)
+            cfg.EXPERIMENT_PATH, run_idx)
 
         logger.info(f"loading existing node embeddings from: '{emb_file}'")
         embedding_ckpt = torch.load(emb_file)
@@ -198,7 +198,7 @@ def perform_tasks(cfg, graph):
     return result_dict
 
 
-def perform_experiment(cfg):
+def perform_experiment(cfg, run_idx):
     """Run full pipeline for 1 experiment config. 
 
     Using the RESUME and STAGE arguments this pipeline can be further resumed, 
@@ -226,7 +226,7 @@ def perform_experiment(cfg):
     graph = reweight_edges(cfg, graph)
     weight_median = graph.edata[cfg.GRAPH_KEYS.WEIGHT_KEY].median()
     logger.info(f"absolute difference between median of weights after reweighting: {torch.absolute(prior_weight_median - weight_median)}")
-    graph = add_embeddings(cfg, graph)
+    graph = add_embeddings(cfg, graph, run_idx)
     result_dict = perform_tasks(cfg, graph)
     return result_dict
 
@@ -352,7 +352,7 @@ def perform_multi_experiment(cfg):
         logger.info("=" * 80)
         logger.info(f"                        Performing experiment trial {run_idx+1}/{cfg.RUNS}")
         logger.info("=" * 80)
-        result_dict = perform_experiment(cfg)
+        result_dict = perform_experiment(cfg, run_idx)
         results.append(result_dict)
 
     # parse results for multiple runs
