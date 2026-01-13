@@ -570,7 +570,8 @@ def setup_logger(cfg):
 def main():
     cfg = parse_args()
     set_seed(cfg.SEED)
-    torch.cuda.set_device(cfg.NODE)
+    if torch.cuda.is_available():
+        torch.cuda.set_device(cfg.NODE)
 
     if cfg.RUN_ALL:
         reproduce(cfg)
