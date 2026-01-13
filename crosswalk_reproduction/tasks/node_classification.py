@@ -7,7 +7,7 @@ import numpy as np
 import logging
 logger = logging.getLogger(__name__)
 
-def perform_node_classification_single(graph, group_key, label_key, emb_key, test_size, n_neighbors):
+def perform_node_classification_single(graph, group_key, label_key, emb_key, test_size, n_neighbors, num_workers=1):
     """Perform node classification on graph. classify each node based on its node embedding using Label Propagation.
     Label Propagation masks a subset of the nodes and then predicts these by propagating the labels for the other nodes.
 
@@ -58,14 +58,14 @@ def perform_node_classification_single(graph, group_key, label_key, emb_key, tes
     y_test = y[test_idx]
 
     # Get gamma for Label Propagation
-    gamma = np.mean(pairwise_distances(X))
+    gamma = np.mean(pairwise_distances(X, n_jobs=num_workers))
 
     # Prepare scikit learn function arrays
     X_lp = np.vstack((X_train, X_test))
     y_lp = np.hstack((y_train[:, 0].squeeze(), -1*np.ones(y_test.shape[0])))
 
     # Train Label Propagation model
-    lp = LabelPropagation(gamma = gamma, n_neighbors=n_neighbors)
+    lp = LabelPropagation(gamma = gamma, n_neighbors=n_neighbors, n_jobs=num_workers)
     lp.fit(X_lp, y_lp)
 
     pred = lp.predict(X_test)
