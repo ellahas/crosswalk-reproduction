@@ -498,6 +498,7 @@ def setup_folder(cfg):
     os.makedirs(Path(cfg.EXPERIMENT_PATH) / "graph")
     os.makedirs(Path(cfg.EXPERIMENT_PATH) / "embeddings")
     os.makedirs(Path(cfg.EXPERIMENT_PATH) / "visualization")
+    os.makedirs(Path(cfg.EXPERIMENT_PATH) / "node_results")
 
 
 def parse_args():
