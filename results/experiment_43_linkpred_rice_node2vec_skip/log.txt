@@ -1,0 +1,47 @@
+================================================================================
+--------------------------------------------------------------------------------
+|                         CROSSWALK REPRODUCTION SUITE                         |
+--------------------------------------------------------------------------------
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment start time: 2026-01-16 10:50:41.009076
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+loaded graph: data/dgl_graphs/rice/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=439, num_edges=19320
+using prior edge weights without reweighting..
+absolute difference between median of weights after reweighting: 0.0
+generating node embeddings..
+training on device: cpu
+training node2vec model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_43_linkpred_rice_node2vec_skip/embeddings/emb_0_node2vec_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 57.635467980295566
+Edge type 1 has accuracy: 53.875968992248055
+Edge type 2 has accuracy: 58.549222797927456
+Accuracy: 56.67701863354038
+Disparity: 4.0897868489080835
+================================================================================
+results for task link prediciton
+--------------------------------------------------------------------------------
+run 0:
+    accuracy: 56.67701863354038
+    disparity: 4.0897868489080835
+================================================================================
+final average of all runs:
+    accuracy: 56.67701863354038
+    disparity: 4.0897868489080835
+
+final std/var of all runs:
+    accuracy: std=0.0, var=0.0
+    disparity: std=0.0, var=0.0
+--------------------------------------------------------------------------------
+accuracy values raw:
+[56.67701863354038]
+disparity values raw:
+[4.0897868489080835]
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment end time: 2026-01-16 10:51:17.073921
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
