@@ -1,5 +1,5 @@
 #!/bin/bash
-model=node2vec_simple
+model=node2vec_skip
 data=rice
 task=linkpred
 ps=(0.01 0.5 1 2)
