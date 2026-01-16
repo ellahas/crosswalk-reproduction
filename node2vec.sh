@@ -2,8 +2,8 @@
 model=node2vec_skip
 data=rice
 task=linkpred
-ps=(0.01 0.5 1 2)
-qs=(0.01 0.5 1 2)
+ps=(0.01 0.5 1.0 2.0)
+qs=(0.01 0.5 1.0 2.0)
 
 for p in "${ps[@]}";
     do
