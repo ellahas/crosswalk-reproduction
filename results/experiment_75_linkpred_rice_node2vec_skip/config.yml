@@ -1,0 +1,86 @@
+BASEDIR: /local/hase/crosswalk-reproduction/results
+CFG_PATH: experiments/linkpred_rice_node2vec_skip.yml
+DATASET: rice
+DATASET_PATHS:
+  ATTR_PATHS:
+  - data/immutable/rice/rice_subset.attr
+  - data/immutable/twitter/sample_4000.attr
+  - data/immutable/deezer/deezer_europe.attr
+  - data/immutable/pokec/pokec_region.attr
+  - no_separate_attr_file
+  - no_separate_attr_file
+  DATASETS:
+  - rice
+  - twitter
+  - deezer
+  - pokec_region
+  - pokec_gender
+  - tolokers
+  LINK_PATHS:
+  - data/immutable/rice/rice_subset.links
+  - data/immutable/twitter/sample_4000.links
+  - data/immutable/deezer/deezer_europe.links
+  - data/immutable/pokec/pokec.links
+  - data/immutable/pokec/pokec_processed.pt
+  - data/immutable/tolokers/tolokers_processed.pt
+  RICE_RAW: data/immutable/rice/rice_raw.attr
+EMBEDDINGS:
+  BATCH_SIZE: 32
+  CONTEXT_SIZE: 10
+  DISABLE_PBAR: null
+  EMBEDDING_DIM: 32
+  EMBEDDING_ID: -1
+  LR: 0.025
+  METHOD: node2vec
+  MIN_COUNT: 0
+  NUM_EPOCHS: 5
+  NUM_NEGATIVE_SAMPLES: 5
+  NUM_WORKERS: 6
+  OPTIMIZER: adam
+  P: 0.1
+  Q: 2.0
+  USE_GENSIM: false
+  WALKS_PER_NODE: 80
+  WALK_LENGTH: 40
+EXPERIMENT_PATH: /local/hase/crosswalk-reproduction/results/experiment_75_linkpred_rice_node2vec_skip
+EXTRA_LOG_NAME: ''
+GRAPH_KEYS:
+  EMB_KEY: emb
+  GROUP_KEY: groups
+  PRIOR_WEIGHTS_KEY: weights
+  WEIGHT_KEY: adjusted_weights
+GRAPH_WEIGHTING:
+  ALPHA: 0.5
+  METHOD: skip
+  P: 4.0
+  USE_ORIGINAL_CROSSWALK_IMPLEMENTATION: false
+  WALKS_PER_NODE: 1000
+  WALK_LENGTH: 5
+INFLUENCE_MAXIMIZATION:
+  K: 40
+  P_INFECTION: 0.01
+LINK_PREDICTION:
+  TEST_SIZE: 0.1
+NODE: 0
+NODE_CLASSIFICATION:
+  LABEL_KEY: college
+  N_NEIGHBORS: 7
+  TEST_SIZE: 0.5
+RESUME: -1
+RUNS: 5
+RUN_ALL: null
+SEED: 0
+STAGE: 0
+SYNTHETIC:
+  DIRECTED: false
+  EDGE_PROBABILITIES:
+  - - 0.8
+    - 0.8
+  - - 0.8
+    - 0.8
+  INIT_WEIGHTS_STRATEGY: uniform
+  NODES:
+  - 20
+  - 20
+  SELF_CONNECT_PROB: 0.0
+TASK: linkpred
