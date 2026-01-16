@@ -447,7 +447,7 @@ def reproduce(cfg):
         setup_logger(cfg)
         try:
             if cfg.RUNS == 1:
-                results = perform_experiment(cfg)
+                results = perform_experiment(cfg, run_idx=0)
                 parse_infmax_runs([results])
                 parse_linkpred_runs([results])
                 parse_nodeclass_runs([results], cfg.EXPERIMENT_PATH)
@@ -587,7 +587,7 @@ def main():
                 F"Continuing experiment_{cfg.RESUME} from stage {cfg.STAGE}, {stage_name[cfg.STAGE]}")
 
         if cfg.RUNS == 1:
-            results = perform_experiment(cfg)
+            results = perform_experiment(cfg, run_idx=0)
             parse_infmax_runs([results])
             parse_linkpred_runs([results])
             parse_nodeclass_runs([results])
