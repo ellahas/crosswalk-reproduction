@@ -11,6 +11,6 @@ for p in "${ps[@]}";
         for q in "${qs[@]}"
             do
                 echo $q
-                uv run xwalk_reprod --cfg "experiments/${task}_${data}_${model}.yml" --opts RUNS 1
+                uv run xwalk_reprod --cfg "experiments/${task}_${data}_${model}.yml" --opts RUNS 1 EMBEDDINGS.P $p EMBEDDINGS.Q $q
             done
     done
