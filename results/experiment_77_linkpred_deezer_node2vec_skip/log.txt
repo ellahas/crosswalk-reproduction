@@ -1,0 +1,145 @@
+================================================================================
+--------------------------------------------------------------------------------
+|                         CROSSWALK REPRODUCTION SUITE                         |
+--------------------------------------------------------------------------------
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment start time: 2026-01-16 16:10:11.785212
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Repeating experiment config: 
+       'experiments/linkpred_rice_node2vec_skip.yml' 
+5 times and averaging results
+================================================================================
+                        Performing experiment trial 1/5
+================================================================================
+loaded graph: data/dgl_graphs/deezer/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+using prior edge weights without reweighting..
+absolute difference between median of weights after reweighting: 0.0
+generating node embeddings..
+training on device: cpu
+training node2vec model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_77_linkpred_deezer_node2vec_skip/embeddings/emb_0_node2vec_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 75.8378016085791
+Edge type 1 has accuracy: 75.33903957314362
+Edge type 2 has accuracy: 76.77725118483413
+Accuracy: 75.77758611395612
+Disparity: 0.3555313015909882
+================================================================================
+                        Performing experiment trial 2/5
+================================================================================
+loaded graph: data/dgl_graphs/deezer/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+using prior edge weights without reweighting..
+absolute difference between median of weights after reweighting: 0.0
+generating node embeddings..
+training on device: cpu
+training node2vec model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_77_linkpred_deezer_node2vec_skip/embeddings/emb_1_node2vec_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 75.23705630611731
+Edge type 1 has accuracy: 76.37738366598099
+Edge type 2 has accuracy: 77.0075020839122
+Accuracy: 76.13336208290659
+Disparity: 0.5368748844868391
+================================================================================
+                        Performing experiment trial 3/5
+================================================================================
+loaded graph: data/dgl_graphs/deezer/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+using prior edge weights without reweighting..
+absolute difference between median of weights after reweighting: 0.0
+generating node embeddings..
+training on device: cpu
+training node2vec model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_77_linkpred_deezer_node2vec_skip/embeddings/emb_2_node2vec_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 76.36622311490501
+Edge type 1 has accuracy: 75.56618997273384
+Edge type 2 has accuracy: 76.8170426065163
+Accuracy: 76.06598027060537
+Disparity: 0.2675470615588277
+================================================================================
+                        Performing experiment trial 4/5
+================================================================================
+loaded graph: data/dgl_graphs/deezer/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+using prior edge weights without reweighting..
+absolute difference between median of weights after reweighting: 0.0
+generating node embeddings..
+training on device: cpu
+training node2vec model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_77_linkpred_deezer_node2vec_skip/embeddings/emb_3_node2vec_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 75.19490317713135
+Edge type 1 has accuracy: 75.52257060262397
+Edge type 2 has accuracy: 77.42519137091162
+Accuracy: 75.78567193143226
+Disparity: 0.9668352396626766
+================================================================================
+                        Performing experiment trial 5/5
+================================================================================
+loaded graph: data/dgl_graphs/deezer/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=28281, num_edges=185504
+using prior edge weights without reweighting..
+absolute difference between median of weights after reweighting: 0.0
+generating node embeddings..
+training on device: cpu
+training node2vec model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_77_linkpred_deezer_node2vec_skip/embeddings/emb_4_node2vec_ed32_wl40_cs10_wpn80_nns5.pt
+performing link prediction task..
+Edge type 0 has accuracy: 76.03146706837393
+Edge type 1 has accuracy: 75.6976097832129
+Edge type 2 has accuracy: 76.11336032388664
+Accuracy: 75.88539701363808
+Disparity: 0.03233507824711914
+================================================================================
+results for task link prediciton
+--------------------------------------------------------------------------------
+run 0:
+    accuracy: 75.77758611395612
+    disparity: 0.3555313015909882
+--------------------------------------------------------------------------------
+run 1:
+    accuracy: 76.13336208290659
+    disparity: 0.5368748844868391
+--------------------------------------------------------------------------------
+run 2:
+    accuracy: 76.06598027060537
+    disparity: 0.2675470615588277
+--------------------------------------------------------------------------------
+run 3:
+    accuracy: 75.78567193143226
+    disparity: 0.9668352396626766
+--------------------------------------------------------------------------------
+run 4:
+    accuracy: 75.88539701363808
+    disparity: 0.03233507824711914
+================================================================================
+final average of all runs:
+    accuracy: 75.92959948250768
+    disparity: 0.43182471310929016
+
+final std/var of all runs:
+    accuracy: std=0.14553073841261013, var=0.021179195822919557
+    disparity: std=0.3129445963207325, var=0.09793432036634622
+--------------------------------------------------------------------------------
+accuracy values raw:
+[75.77758611395612, 76.13336208290659, 76.06598027060537, 75.78567193143226, 75.88539701363808]
+disparity values raw:
+[0.3555313015909882, 0.5368748844868391, 0.2675470615588277, 0.9668352396626766, 0.03233507824711914]
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment end time: 2026-01-16 17:25:48.480980
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
