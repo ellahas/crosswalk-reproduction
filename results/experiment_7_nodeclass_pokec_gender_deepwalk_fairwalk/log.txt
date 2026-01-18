@@ -4,89 +4,118 @@
 --------------------------------------------------------------------------------
 ================================================================================
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-             Experiment start time: 2026-01-13 12:26:37.349196
+             Experiment start time: 2026-01-14 18:20:31.646969
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Continuing experiment_7 from stage 2, performing downstream tasks
 Repeating experiment config: 
        'experiments/nodeclass_rice_deepwalk_fairwalk.yml' 
 5 times and averaging results
 ================================================================================
                         Performing experiment trial 1/5
 ================================================================================
-loaded graph: data/dgl_graphs/pokec_gender/graph.bin
-saved graph
+loaded graph from: '/local/hase/crosswalk-reproduction/results/experiment_7_nodeclass_pokec_gender_deepwalk_fairwalk/graph/graph.bin'
 Graph on device: cpu
 graph shape, num_nodes=69949, num_edges=260044
-performing edge reweighting with fairwalk
-absolute difference between median of weights after reweighting: 0.03333333134651184
-generating node embeddings..
-training on device: cuda
-training deepwalk model with : adam, lr=0.025, batch_size=32
-saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_7_nodeclass_pokec_gender_deepwalk_fairwalk/embeddings/emb_0_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+Skipping graph reweighting for stage 0, as existing node embeddings will be used.
+absolute difference between median of weights after reweighting: 0.0
+loading existing node embeddings from: '/local/hase/crosswalk-reproduction/results/experiment_7_nodeclass_pokec_gender_deepwalk_fairwalk/embeddings/emb_0_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt'
 performing node classification task..
-trying to get label 'college' from graph but it does not exist, skipping node classification for this graph
+accuracy for group 0: 46.363749378418696
+accuracy for group 1: 34.28813469582253
+Mean weighted accuracy: 39.842744817726945
+Disparity: 36.455117490633036
 ================================================================================
                         Performing experiment trial 2/5
 ================================================================================
-loaded graph: data/dgl_graphs/pokec_gender/graph.bin
-saved graph
+loaded graph from: '/local/hase/crosswalk-reproduction/results/experiment_7_nodeclass_pokec_gender_deepwalk_fairwalk/graph/graph.bin'
 Graph on device: cpu
 graph shape, num_nodes=69949, num_edges=260044
-performing edge reweighting with fairwalk
-absolute difference between median of weights after reweighting: 0.03333333134651184
-generating node embeddings..
-training on device: cuda
-training deepwalk model with : adam, lr=0.025, batch_size=32
-saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_7_nodeclass_pokec_gender_deepwalk_fairwalk/embeddings/emb_1_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+Skipping graph reweighting for stage 0, as existing node embeddings will be used.
+absolute difference between median of weights after reweighting: 0.0
+loading existing node embeddings from: '/local/hase/crosswalk-reproduction/results/experiment_7_nodeclass_pokec_gender_deepwalk_fairwalk/embeddings/emb_1_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt'
 performing node classification task..
-trying to get label 'college' from graph but it does not exist, skipping node classification for this graph
+accuracy for group 0: 46.57473869789699
+accuracy for group 1: 33.98104017179071
+Mean weighted accuracy: 39.699785561115085
+Disparity: 39.650310641612876
 ================================================================================
                         Performing experiment trial 3/5
 ================================================================================
-loaded graph: data/dgl_graphs/pokec_gender/graph.bin
-saved graph
+loaded graph from: '/local/hase/crosswalk-reproduction/results/experiment_7_nodeclass_pokec_gender_deepwalk_fairwalk/graph/graph.bin'
 Graph on device: cpu
 graph shape, num_nodes=69949, num_edges=260044
-performing edge reweighting with fairwalk
-absolute difference between median of weights after reweighting: 0.03333333134651184
-generating node embeddings..
-training on device: cuda
-training deepwalk model with : adam, lr=0.025, batch_size=32
-saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_7_nodeclass_pokec_gender_deepwalk_fairwalk/embeddings/emb_2_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+Skipping graph reweighting for stage 0, as existing node embeddings will be used.
+absolute difference between median of weights after reweighting: 0.0
+loading existing node embeddings from: '/local/hase/crosswalk-reproduction/results/experiment_7_nodeclass_pokec_gender_deepwalk_fairwalk/embeddings/emb_2_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt'
 performing node classification task..
-trying to get label 'college' from graph but it does not exist, skipping node classification for this graph
+accuracy for group 0: 46.825148576790745
+accuracy for group 1: 33.87045813586098
+Mean weighted accuracy: 39.79127948534668
+Disparity: 41.95600110507927
 ================================================================================
                         Performing experiment trial 4/5
 ================================================================================
-loaded graph: data/dgl_graphs/pokec_gender/graph.bin
-saved graph
+loaded graph from: '/local/hase/crosswalk-reproduction/results/experiment_7_nodeclass_pokec_gender_deepwalk_fairwalk/graph/graph.bin'
 Graph on device: cpu
 graph shape, num_nodes=69949, num_edges=260044
-performing edge reweighting with fairwalk
-absolute difference between median of weights after reweighting: 0.03333333134651184
-generating node embeddings..
-training on device: cuda
-training deepwalk model with : adam, lr=0.025, batch_size=32
-saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_7_nodeclass_pokec_gender_deepwalk_fairwalk/embeddings/emb_3_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+Skipping graph reweighting for stage 0, as existing node embeddings will be used.
+absolute difference between median of weights after reweighting: 0.0
+loading existing node embeddings from: '/local/hase/crosswalk-reproduction/results/experiment_7_nodeclass_pokec_gender_deepwalk_fairwalk/embeddings/emb_3_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt'
 performing node classification task..
-trying to get label 'college' from graph but it does not exist, skipping node classification for this graph
+accuracy for group 0: 46.16206701452191
+accuracy for group 1: 33.40675477239354
+Mean weighted accuracy: 39.208005718370266
+Disparity: 40.67449759854746
 ================================================================================
                         Performing experiment trial 5/5
 ================================================================================
-loaded graph: data/dgl_graphs/pokec_gender/graph.bin
-saved graph
+loaded graph from: '/local/hase/crosswalk-reproduction/results/experiment_7_nodeclass_pokec_gender_deepwalk_fairwalk/graph/graph.bin'
 Graph on device: cpu
 graph shape, num_nodes=69949, num_edges=260044
-performing edge reweighting with fairwalk
-absolute difference between median of weights after reweighting: 0.03333333134651184
-generating node embeddings..
-training on device: cuda
-training deepwalk model with : adam, lr=0.025, batch_size=32
-saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_7_nodeclass_pokec_gender_deepwalk_fairwalk/embeddings/emb_4_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+Skipping graph reweighting for stage 0, as existing node embeddings will be used.
+absolute difference between median of weights after reweighting: 0.0
+loading existing node embeddings from: '/local/hase/crosswalk-reproduction/results/experiment_7_nodeclass_pokec_gender_deepwalk_fairwalk/embeddings/emb_4_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt'
 performing node classification task..
-trying to get label 'college' from graph but it does not exist, skipping node classification for this graph
+accuracy for group 0: 46.00237544539601
+accuracy for group 1: 33.81810517441248
+Mean weighted accuracy: 39.39099356683345
+Disparity: 37.11411050909328
 ================================================================================
 results for task node classification
 --------------------------------------------------------------------------------
 run 0:
-    accuracy: 0
-    disparity: 0
+    accuracy: 39.842744817726945
+    disparity: 36.455117490633036
+--------------------------------------------------------------------------------
+run 1:
+    accuracy: 39.699785561115085
+    disparity: 39.650310641612876
+--------------------------------------------------------------------------------
+run 2:
+    accuracy: 39.79127948534668
+    disparity: 41.95600110507927
+--------------------------------------------------------------------------------
+run 3:
+    accuracy: 39.208005718370266
+    disparity: 40.67449759854746
+--------------------------------------------------------------------------------
+run 4:
+    accuracy: 39.39099356683345
+    disparity: 37.11411050909328
+================================================================================
+final average of all runs:
+    accuracy: 39.586561829878484
+    disparities: 39.170007468993184
+
+final std/var of all runs:
+    accuracy: std=0.24572762567899048, var=0.06038206602183407
+    disparity: std=2.0906114958161393, var=4.370656426438595
+--------------------------------------------------------------------------------
+accuracy values raw:
+[39.842744817726945, 39.699785561115085, 39.79127948534668, 39.208005718370266, 39.39099356683345]
+disparity values raw:
+[36.455117490633036, 39.650310641612876, 41.95600110507927, 40.67449759854746, 37.11411050909328]
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment end time: 2026-01-15 21:27:47.970944
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
