@@ -1,0 +1,140 @@
+================================================================================
+--------------------------------------------------------------------------------
+|                         CROSSWALK REPRODUCTION SUITE                         |
+--------------------------------------------------------------------------------
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment start time: 2026-01-20 14:04:27.696831
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Repeating experiment config: 
+       'experiments/nodeclass_rice_deepwalk_fairwalk.yml' 
+5 times and averaging results
+================================================================================
+                        Performing experiment trial 1/5
+================================================================================
+loaded graph: data/dgl_graphs/rice/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=439, num_edges=19320
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.006987578235566616
+generating node embeddings..
+training on device: cpu
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_101_nodeclass_rice_deepwalk_fairwalk/embeddings/emb_0_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing node classification task..
+accuracy for group 0.0: 15.204678362573098
+accuracy for group 1.0: 22.448979591836736
+Mean weighted accuracy: 16.818181818181817
+Disparity: 13.119975075077662
+================================================================================
+                        Performing experiment trial 2/5
+================================================================================
+loaded graph: data/dgl_graphs/rice/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=439, num_edges=19320
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.006987578235566616
+generating node embeddings..
+training on device: cpu
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_101_nodeclass_rice_deepwalk_fairwalk/embeddings/emb_1_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing node classification task..
+accuracy for group 0.0: 11.242603550295858
+accuracy for group 1.0: 23.52941176470588
+Mean weighted accuracy: 14.090909090909092
+Disparity: 37.741414024423406
+================================================================================
+                        Performing experiment trial 3/5
+================================================================================
+loaded graph: data/dgl_graphs/rice/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=439, num_edges=19320
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.006987578235566616
+generating node embeddings..
+training on device: cpu
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_101_nodeclass_rice_deepwalk_fairwalk/embeddings/emb_2_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing node classification task..
+accuracy for group 0.0: 16.867469879518072
+accuracy for group 1.0: 20.37037037037037
+Mean weighted accuracy: 17.727272727272727
+Disparity: 3.0675779622033175
+================================================================================
+                        Performing experiment trial 4/5
+================================================================================
+loaded graph: data/dgl_graphs/rice/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=439, num_edges=19320
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.006987578235566616
+generating node embeddings..
+training on device: cpu
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_101_nodeclass_rice_deepwalk_fairwalk/embeddings/emb_3_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing node classification task..
+accuracy for group 0.0: 23.699421965317917
+accuracy for group 1.0: 21.27659574468085
+Mean weighted accuracy: 23.181818181818183
+Disparity: 1.4675217238516227
+================================================================================
+                        Performing experiment trial 5/5
+================================================================================
+loaded graph: data/dgl_graphs/rice/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=439, num_edges=19320
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.006987578235566616
+generating node embeddings..
+training on device: cpu
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_101_nodeclass_rice_deepwalk_fairwalk/embeddings/emb_4_deepwalk_ed32_wl40_cs10_wpn80_nns5.pt
+performing node classification task..
+accuracy for group 0.0: 18.497109826589593
+accuracy for group 1.0: 14.893617021276595
+Mean weighted accuracy: 17.727272727272727
+Disparity: 3.2462900994856345
+================================================================================
+results for task node classification
+--------------------------------------------------------------------------------
+run 0:
+    accuracy: 16.818181818181817
+    disparity: 13.119975075077662
+--------------------------------------------------------------------------------
+run 1:
+    accuracy: 14.090909090909092
+    disparity: 37.741414024423406
+--------------------------------------------------------------------------------
+run 2:
+    accuracy: 17.727272727272727
+    disparity: 3.0675779622033175
+--------------------------------------------------------------------------------
+run 3:
+    accuracy: 23.181818181818183
+    disparity: 1.4675217238516227
+--------------------------------------------------------------------------------
+run 4:
+    accuracy: 17.727272727272727
+    disparity: 3.2462900994856345
+================================================================================
+final average of all runs:
+    accuracy: 17.909090909090907
+    disparities: 11.728555777008328
+
+final std/var of all runs:
+    accuracy: std=2.954195783503986, var=8.72727272727273
+    disparity: std=13.64444963665311, var=186.1710058871632
+--------------------------------------------------------------------------------
+accuracy values raw:
+[16.818181818181817, 14.090909090909092, 17.727272727272727, 23.181818181818183, 17.727272727272727]
+disparity values raw:
+[13.119975075077662, 37.741414024423406, 3.0675779622033175, 1.4675217238516227, 3.2462900994856345]
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment end time: 2026-01-20 14:07:42.184603
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
