@@ -14,7 +14,7 @@ from dgl.data.utils import load_graphs, save_graphs
 from .config import get_cfg_defaults, update_config
 from .data_provider import read_graph, synthesize_graph
 from .node_embeddor import generate_embeddings
-from .preprocessor import get_crosswalk_weights, get_fairwalk_weights
+from .preprocessor import get_crosswalk_weights, get_fairwalk_weights, get_degree_weights
 from .tasks import (perform_influence_maximization_single,
                     perform_link_prediction_single,
                     perform_node_classification_single)
@@ -109,6 +109,11 @@ def reweight_edges(cfg, graph):
         elif cfg.GRAPH_WEIGHTING.METHOD == 'skip':
             logger.info("using prior edge weights without reweighting..")
             adjusted_weights = graph.edata[cfg.GRAPH_KEYS.PRIOR_WEIGHTS_KEY]
+
+        elif cfg.GRAPH_WEIGHTING.METHOD == 'degree':
+            logger.info("performing edge reweighting with degree")
+            adjusted_weights = get_degree_weights(graph)
+
         else:
             logger.info(f"reweighting method '{cfg.GRAPH_WEIGHTING.METHOD}' not implemented")
     # if resuming but at stage 2
