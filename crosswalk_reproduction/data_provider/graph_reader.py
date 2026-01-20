@@ -126,7 +126,7 @@ def read_attr_links_graphs(link_filepath, attr_filepath):
 def read_pt_graph(pt_filepath):
     """Read a .pt file containing link and attribute information"""
     data = torch.load(Path(pt_filepath).with_suffix('.pt'))
-    link_data = data['edge_index']
+    link_data = torch.tensor(data['edge_index'])
     links = []
     for i in range(link_data.size(1)):
         link_dict = {
