@@ -37,5 +37,5 @@ def get_fair_degree_weights(g, group_key):
             group_weights_total = torch.sum(1/g.in_degrees(group_neighbors))
 
             for nb in group_neighbors:
-                new_weights[g.edge_ids(source, nb)] = g.in_degrees(nb).item() / group_weights_total
+                new_weights[g.edge_ids(source, nb)] = 1 / g.in_degrees(nb).item() / group_weights_total
     return new_weights
