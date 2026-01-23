@@ -1,4 +1,3 @@
-DATASET: "rice"                                 # P dataset: rice, twitter, synthetic
 TASK: "nodeclass"                               # P options are: infmax, nodeclass, linkpred, all.
 RUNS: 5                                         # P number of runs
 
@@ -8,3 +7,6 @@ GRAPH_WEIGHTING:                                # H crosswalk parameters
   P: 1.0                                        # P exponent p in the crosswalk formula m(u)^p
 EMBEDDINGS:                                     # H embedding parameters
   METHOD: 'deepwalk'                            # P options are ['node2vec', 'deepwalk']
+
+NODE_CLASSIFICATION:
+  LABEL_KEY: 'labels'

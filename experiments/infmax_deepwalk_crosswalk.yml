@@ -1,4 +1,3 @@
-DATASET: "deezer"                                 # P dataset: rice, twitter, synthetic
 TASK: "infmax"                                  # P options are: infmax, nodeclass, linkpred, all.
 RUNS: 5                                         # P number of runs
 
@@ -7,8 +6,6 @@ GRAPH_WEIGHTING:                                # H crosswalk parameters
   ALPHA: 0.5                                    # P
   P: 4.0                                        # P exponent p in the crosswalk formula m(u)^p
 EMBEDDINGS:                                     # H embedding parameters
-  METHOD: 'node2vec'                            # P options are ['node2vec', 'deepwalk']
-  P: 0.5                                        # P
-  Q: 0.5                                        # P
+  METHOD: 'deepwalk'                            # P options are ['node2vec', 'deepwalk']
 INFLUENCE_MAXIMIZATION:                         # H Influence maximization parameters 
   P_INFECTION: 0.01                             # P
