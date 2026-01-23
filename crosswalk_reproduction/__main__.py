@@ -115,7 +115,7 @@ def reweight_edges(cfg, graph):
             adjusted_weights = get_degree_weights(graph)
 
         elif cfg.GRAPH_WEIGHTING.METHOD == 'fair-degree':
-            logger.info("performing edge reweighting with degree")
+            logger.info("performing edge reweighting with degree and fairwalk")
             adjusted_weights = get_fair_degree_weights(graph, cfg.GRAPH_KEYS.GROUP_KEY)
 
         else:
