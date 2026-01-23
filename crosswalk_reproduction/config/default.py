@@ -173,7 +173,7 @@ def verify_config(cfg):
     cfg.TASK = cfg.TASK.lower()
     assert cfg.DATASET in cfg.DATASET_PATHS.DATASETS
     assert cfg.TASK in ['linkpred', 'infmax', 'nodeclass', 'all']
-    assert cfg.GRAPH_WEIGHTING.METHOD in ['crosswalk', 'fairwalk', 'skip', 'degree']
+    assert cfg.GRAPH_WEIGHTING.METHOD in ['crosswalk', 'fairwalk', 'skip', 'degree', 'fair-degree']
     assert cfg.RUNS > 0
 
 
