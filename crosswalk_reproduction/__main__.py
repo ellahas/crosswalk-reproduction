@@ -201,7 +201,8 @@ def perform_tasks(cfg, graph):
     if cfg.TASK in ['nodeclass', 'all']:
         logger.info('performing node classification task..')
         results = perform_node_classification_single(graph, cfg.GRAPH_KEYS.GROUP_KEY, cfg.NODE_CLASSIFICATION.LABEL_KEY, cfg.GRAPH_KEYS.EMB_KEY,
-                                                     cfg.NODE_CLASSIFICATION.TEST_SIZE, cfg.NODE_CLASSIFICATION.N_NEIGHBORS, cfg.EMBEDDINGS.NUM_WORKERS)
+                                                     cfg.NODE_CLASSIFICATION.TEST_SIZE, cfg.NODE_CLASSIFICATION.N_NEIGHBORS, cfg.EMBEDDINGS.NUM_WORKERS,
+                                                     cfg.NODE_CLASSIFICATION.KERNEL)
         result_dict['nodeclass'] = results
 
     return result_dict

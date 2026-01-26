@@ -7,7 +7,7 @@ import numpy as np
 import logging
 logger = logging.getLogger(__name__)
 
-def perform_node_classification_single(graph, group_key, label_key, emb_key, test_size, n_neighbors, num_workers=1):
+def perform_node_classification_single(graph, group_key, label_key, emb_key, test_size, n_neighbors, num_workers=1, kernel='rbf'):
     """Perform node classification on graph. classify each node based on its node embedding using Label Propagation.
     Label Propagation masks a subset of the nodes and then predicts these by propagating the labels for the other nodes.
 
@@ -18,6 +18,8 @@ def perform_node_classification_single(graph, group_key, label_key, emb_key, tes
         emb_key (str): Key of embeddings in g.ndata which will be used to identify seeds. 
         test_size (float): Value between 0 and 1.0 determining the fraction of the data used for testing (default: 0.5)
         n_neighbors (int): The number of neighbors taken into account by the label propagation algorithm
+        num_workers (int)
+        kernel (str): The kernel used for label propagation. 'rbf' or 'knn'. knn is better for large graphs to keep computation down.
     
     """
     # Get the embeddings, labels (college_id 1 to 9), and sensitive group (age group)
@@ -58,14 +60,16 @@ def perform_node_classification_single(graph, group_key, label_key, emb_key, tes
     y_test = y[test_idx]
 
     # Get gamma for Label Propagation
-    gamma = np.mean(pairwise_distances(X, n_jobs=num_workers))
+    if kernel == 'rbf':
+        gamma = np.mean(pairwise_distances(X, n_jobs=num_workers))
+    else: gamma = 20  # default value, won't be used
 
     # Prepare scikit learn function arrays
     X_lp = np.vstack((X_train, X_test))
     y_lp = np.hstack((y_train[:, 0].squeeze(), -1*np.ones(y_test.shape[0])))
 
     # Train Label Propagation model
-    lp = LabelPropagation(gamma = gamma, n_neighbors=n_neighbors, n_jobs=num_workers)
+    lp = LabelPropagation(kernel=kernel, gamma = gamma, n_neighbors=n_neighbors, n_jobs=num_workers)
     lp.fit(X_lp, y_lp)
 
     pred = lp.predict(X_test)

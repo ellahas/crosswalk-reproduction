@@ -137,6 +137,7 @@ _C.LINK_PREDICTION.TEST_SIZE = 0.1              # from paper
 # node classification parameters
 _C.NODE_CLASSIFICATION = CN()
 _C.NODE_CLASSIFICATION.TEST_SIZE = 0.5          # from paper
+_C.NODE_CLASSIFICATION.KERNEL = 'rbf'           # default from sklearn
 _C.NODE_CLASSIFICATION.N_NEIGHBORS = 7          # from paper
 _C.NODE_CLASSIFICATION.LABEL_KEY = "college"    # standard label for Rice dataset
 
