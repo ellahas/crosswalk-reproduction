@@ -4,94 +4,118 @@
 --------------------------------------------------------------------------------
 ================================================================================
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-             Experiment start time: 2026-01-26 13:44:23.685612
+             Experiment start time: 2026-01-26 16:49:21.647217
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Continuing experiment_114 from stage 2, performing downstream tasks
 Repeating experiment config: 
        'experiments/nodeclass_deepwalk_crosswalk.yml' 
 5 times and averaging results
 ================================================================================
                         Performing experiment trial 1/5
 ================================================================================
-loaded graph: data/dgl_graphs/tolokers/graph.bin
-saved graph
+loaded graph from: '/local/hase/crosswalk-reproduction/results/experiment_114_nodeclass_tolokers_deepwalk_crosswalk/graph/graph.bin'
 Graph on device: cpu
 graph shape, num_nodes=11758, num_edges=1038000
-performing edge reweighting with crosswalk
-reweighted edges
-absolute difference between median of weights after reweighting: 0.0013076844625175
-generating node embeddings..
-training on device: cuda
-training deepwalk model with : adam, lr=0.025, batch_size=32
-saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_114_nodeclass_tolokers_deepwalk_crosswalk/embeddings/emb_0_deepwalk_ed32_wl40_cs5_wpn80_nns5.pt
+Skipping graph reweighting for stage 0, as existing node embeddings will be used.
+absolute difference between median of weights after reweighting: 0.0
+loading existing node embeddings from: '/local/hase/crosswalk-reproduction/results/experiment_114_nodeclass_tolokers_deepwalk_crosswalk/embeddings/emb_0_deepwalk_ed32_wl40_cs5_wpn80_nns5.pt'
 performing node classification task..
-trying to get label 'college' from graph but it does not exist, skipping node classification for this graph
+accuracy for group 0: 75.40983606557377
+accuracy for group 1: 78.52538275584206
+Mean weighted accuracy: 78.04048307535295
+Disparity: 2.4266577948104224
 ================================================================================
                         Performing experiment trial 2/5
 ================================================================================
-loaded graph: data/dgl_graphs/tolokers/graph.bin
-saved graph
+loaded graph from: '/local/hase/crosswalk-reproduction/results/experiment_114_nodeclass_tolokers_deepwalk_crosswalk/graph/graph.bin'
 Graph on device: cpu
 graph shape, num_nodes=11758, num_edges=1038000
-performing edge reweighting with crosswalk
-reweighted edges
-absolute difference between median of weights after reweighting: 0.0013076032046228647
-generating node embeddings..
-training on device: cuda
-training deepwalk model with : adam, lr=0.025, batch_size=32
-saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_114_nodeclass_tolokers_deepwalk_crosswalk/embeddings/emb_1_deepwalk_ed32_wl40_cs5_wpn80_nns5.pt
+Skipping graph reweighting for stage 0, as existing node embeddings will be used.
+absolute difference between median of weights after reweighting: 0.0
+loading existing node embeddings from: '/local/hase/crosswalk-reproduction/results/experiment_114_nodeclass_tolokers_deepwalk_crosswalk/embeddings/emb_1_deepwalk_ed32_wl40_cs5_wpn80_nns5.pt'
 performing node classification task..
-trying to get label 'college' from graph but it does not exist, skipping node classification for this graph
+accuracy for group 0: 72.3157894736842
+accuracy for group 1: 78.83952120105498
+Mean weighted accuracy: 77.7853376424562
+Disparity: 10.639768912676013
 ================================================================================
                         Performing experiment trial 3/5
 ================================================================================
-loaded graph: data/dgl_graphs/tolokers/graph.bin
-saved graph
+loaded graph from: '/local/hase/crosswalk-reproduction/results/experiment_114_nodeclass_tolokers_deepwalk_crosswalk/graph/graph.bin'
 Graph on device: cpu
 graph shape, num_nodes=11758, num_edges=1038000
-performing edge reweighting with crosswalk
-reweighted edges
-absolute difference between median of weights after reweighting: 0.0013065035454928875
-generating node embeddings..
-training on device: cuda
-training deepwalk model with : adam, lr=0.025, batch_size=32
-saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_114_nodeclass_tolokers_deepwalk_crosswalk/embeddings/emb_2_deepwalk_ed32_wl40_cs5_wpn80_nns5.pt
+Skipping graph reweighting for stage 0, as existing node embeddings will be used.
+absolute difference between median of weights after reweighting: 0.0
+loading existing node embeddings from: '/local/hase/crosswalk-reproduction/results/experiment_114_nodeclass_tolokers_deepwalk_crosswalk/embeddings/emb_2_deepwalk_ed32_wl40_cs5_wpn80_nns5.pt'
 performing node classification task..
-trying to get label 'college' from graph but it does not exist, skipping node classification for this graph
+accuracy for group 0: 73.09322033898306
+accuracy for group 1: 78.76393110435663
+Mean weighted accuracy: 77.85337642456199
+Disparity: 8.039240146130926
 ================================================================================
                         Performing experiment trial 4/5
 ================================================================================
-loaded graph: data/dgl_graphs/tolokers/graph.bin
-saved graph
+loaded graph from: '/local/hase/crosswalk-reproduction/results/experiment_114_nodeclass_tolokers_deepwalk_crosswalk/graph/graph.bin'
 Graph on device: cpu
 graph shape, num_nodes=11758, num_edges=1038000
-performing edge reweighting with crosswalk
-reweighted edges
-absolute difference between median of weights after reweighting: 0.0013074171729385853
-generating node embeddings..
-training on device: cuda
-training deepwalk model with : adam, lr=0.025, batch_size=32
-saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_114_nodeclass_tolokers_deepwalk_crosswalk/embeddings/emb_3_deepwalk_ed32_wl40_cs5_wpn80_nns5.pt
+Skipping graph reweighting for stage 0, as existing node embeddings will be used.
+absolute difference between median of weights after reweighting: 0.0
+loading existing node embeddings from: '/local/hase/crosswalk-reproduction/results/experiment_114_nodeclass_tolokers_deepwalk_crosswalk/embeddings/emb_3_deepwalk_ed32_wl40_cs5_wpn80_nns5.pt'
 performing node classification task..
-trying to get label 'college' from graph but it does not exist, skipping node classification for this graph
+accuracy for group 0: 71.96162046908316
+accuracy for group 1: 79.05282331511839
+Mean weighted accuracy: 77.92141520666779
+Disparity: 12.571289450904537
 ================================================================================
                         Performing experiment trial 5/5
 ================================================================================
-loaded graph: data/dgl_graphs/tolokers/graph.bin
-saved graph
+loaded graph from: '/local/hase/crosswalk-reproduction/results/experiment_114_nodeclass_tolokers_deepwalk_crosswalk/graph/graph.bin'
 Graph on device: cpu
 graph shape, num_nodes=11758, num_edges=1038000
-performing edge reweighting with crosswalk
-reweighted edges
-absolute difference between median of weights after reweighting: 0.0013084886595606804
-generating node embeddings..
-training on device: cuda
-training deepwalk model with : adam, lr=0.025, batch_size=32
-saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_114_nodeclass_tolokers_deepwalk_crosswalk/embeddings/emb_4_deepwalk_ed32_wl40_cs5_wpn80_nns5.pt
+Skipping graph reweighting for stage 0, as existing node embeddings will be used.
+absolute difference between median of weights after reweighting: 0.0
+loading existing node embeddings from: '/local/hase/crosswalk-reproduction/results/experiment_114_nodeclass_tolokers_deepwalk_crosswalk/embeddings/emb_4_deepwalk_ed32_wl40_cs5_wpn80_nns5.pt'
 performing node classification task..
-trying to get label 'college' from graph but it does not exist, skipping node classification for this graph
+accuracy for group 0: 72.09554831704669
+accuracy for group 1: 79.20532472771279
+Mean weighted accuracy: 78.0915121619323
+Disparity: 12.637230152416034
 ================================================================================
 results for task node classification
 --------------------------------------------------------------------------------
 run 0:
-    accuracy: 0
-    disparity: 0
+    accuracy: 78.04048307535295
+    disparity: 2.4266577948104224
+--------------------------------------------------------------------------------
+run 1:
+    accuracy: 77.7853376424562
+    disparity: 10.639768912676013
+--------------------------------------------------------------------------------
+run 2:
+    accuracy: 77.85337642456199
+    disparity: 8.039240146130926
+--------------------------------------------------------------------------------
+run 3:
+    accuracy: 77.92141520666779
+    disparity: 12.571289450904537
+--------------------------------------------------------------------------------
+run 4:
+    accuracy: 78.0915121619323
+    disparity: 12.637230152416034
+================================================================================
+final average of all runs:
+    accuracy: 77.93842490219426
+    disparities: 9.262837291387587
+
+final std/var of all runs:
+    accuracy: std=0.11385065848397288, var=0.012961972437234227
+    disparity: std=3.806806106052116, var=14.491772729075672
+--------------------------------------------------------------------------------
+accuracy values raw:
+[78.04048307535295, 77.7853376424562, 77.85337642456199, 77.92141520666779, 78.0915121619323]
+disparity values raw:
+[2.4266577948104224, 10.639768912676013, 8.039240146130926, 12.571289450904537, 12.637230152416034]
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment end time: 2026-01-26 16:49:56.493515
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
