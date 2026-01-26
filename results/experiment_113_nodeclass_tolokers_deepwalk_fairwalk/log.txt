@@ -1,0 +1,92 @@
+================================================================================
+--------------------------------------------------------------------------------
+|                         CROSSWALK REPRODUCTION SUITE                         |
+--------------------------------------------------------------------------------
+================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             Experiment start time: 2026-01-26 13:14:05.004003
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Repeating experiment config: 
+       'experiments/nodeclass_deepwalk_fairwalk.yml' 
+5 times and averaging results
+================================================================================
+                        Performing experiment trial 1/5
+================================================================================
+loaded graph: data/dgl_graphs/tolokers/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=11758, num_edges=1038000
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.0012407440226525068
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_113_nodeclass_tolokers_deepwalk_fairwalk/embeddings/emb_0_deepwalk_ed32_wl40_cs5_wpn80_nns5.pt
+performing node classification task..
+trying to get label 'college' from graph but it does not exist, skipping node classification for this graph
+================================================================================
+                        Performing experiment trial 2/5
+================================================================================
+loaded graph: data/dgl_graphs/tolokers/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=11758, num_edges=1038000
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.0012407440226525068
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_113_nodeclass_tolokers_deepwalk_fairwalk/embeddings/emb_1_deepwalk_ed32_wl40_cs5_wpn80_nns5.pt
+performing node classification task..
+trying to get label 'college' from graph but it does not exist, skipping node classification for this graph
+================================================================================
+                        Performing experiment trial 3/5
+================================================================================
+loaded graph: data/dgl_graphs/tolokers/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=11758, num_edges=1038000
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.0012407440226525068
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_113_nodeclass_tolokers_deepwalk_fairwalk/embeddings/emb_2_deepwalk_ed32_wl40_cs5_wpn80_nns5.pt
+performing node classification task..
+trying to get label 'college' from graph but it does not exist, skipping node classification for this graph
+================================================================================
+                        Performing experiment trial 4/5
+================================================================================
+loaded graph: data/dgl_graphs/tolokers/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=11758, num_edges=1038000
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.0012407440226525068
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_113_nodeclass_tolokers_deepwalk_fairwalk/embeddings/emb_3_deepwalk_ed32_wl40_cs5_wpn80_nns5.pt
+performing node classification task..
+trying to get label 'college' from graph but it does not exist, skipping node classification for this graph
+================================================================================
+                        Performing experiment trial 5/5
+================================================================================
+loaded graph: data/dgl_graphs/tolokers/graph.bin
+saved graph
+Graph on device: cpu
+graph shape, num_nodes=11758, num_edges=1038000
+performing edge reweighting with fairwalk
+absolute difference between median of weights after reweighting: 0.0012407440226525068
+generating node embeddings..
+training on device: cuda
+training deepwalk model with : adam, lr=0.025, batch_size=32
+saving embedding file to /local/hase/crosswalk-reproduction/results/experiment_113_nodeclass_tolokers_deepwalk_fairwalk/embeddings/emb_4_deepwalk_ed32_wl40_cs5_wpn80_nns5.pt
+performing node classification task..
+trying to get label 'college' from graph but it does not exist, skipping node classification for this graph
+================================================================================
+results for task node classification
+--------------------------------------------------------------------------------
+run 0:
+    accuracy: 0
+    disparity: 0
