@@ -241,7 +241,7 @@ def perform_experiment(cfg, run_idx):
     return result_dict
 
 
-def parse_infmax_runs(results):
+def parse_infmax_runs(results, experiment_path=None):
     if 'infmax' in results[0]:
         logger.info("=" * 80)
         logger.info("results for task influence maximization")
@@ -261,6 +261,9 @@ def parse_infmax_runs(results):
             infected_nodes.append(task_res[run_idx]['infected_nodes_fraction'])
             # infected_ratios_by_group.append(task_res[run_idx]['infected_ratios_by_group'])
             disparities.append(task_res[run_idx]['disparity'])
+            if experiment_path is not None:
+                file_path = Path(experiment_path) / f"infmax_results_{run_idx}.npy"
+                np.save(file_path, np.array(task_res[run_idx]['infected_nodes']))
 
         logger.info("=" * 80)
         logger.info("final mean of all runs:")
@@ -366,7 +369,7 @@ def perform_multi_experiment(cfg):
         results.append(result_dict)
 
     # parse results for multiple runs
-    parse_infmax_runs(results)
+    parse_infmax_runs(results, cfg.EXPERIMENT_PATH)
     parse_linkpred_runs(results)
     parse_nodeclass_runs(results, cfg.EXPERIMENT_PATH)
     return results
