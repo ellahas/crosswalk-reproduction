@@ -69,7 +69,7 @@ def perform_node_classification_single(graph, group_key, label_key, emb_key, tes
     y_lp = np.hstack((y_train[:, 0].squeeze(), -1*np.ones(y_test.shape[0])))
 
     # Train Label Propagation model
-    lp = LabelPropagation(kernel=kernel, gamma = gamma, n_neighbors=n_neighbors, n_jobs=num_workers)
+    lp = LabelPropagation(kernel=kernel, gamma = gamma, n_neighbors=n_neighbors, n_jobs=num_workers, max_iter=5000)
     lp.fit(X_lp, y_lp)
 
     pred = lp.predict(X_test)
